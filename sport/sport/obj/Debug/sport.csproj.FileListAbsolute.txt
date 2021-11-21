@@ -12,3 +12,17 @@ D:\athletes\sport\sport\obj\Debug\sport.Formmain.resources
 D:\athletes\sport\sport\obj\Debug\sport.FormLogin.resources
 D:\athletes\sport\sport\obj\Debug\sport.FormApcl.resources
 D:\athletes\sport\sport\obj\Debug\sport.FormProfile.resources
+D:\smile\Project\DSport\sport\sport\bin\Debug\sport.exe.config
+D:\smile\Project\DSport\sport\sport\bin\Debug\sport.exe
+D:\smile\Project\DSport\sport\sport\bin\Debug\sport.pdb
+D:\smile\Project\DSport\sport\sport\obj\Debug\sport.csproj.AssemblyReference.cache
+D:\smile\Project\DSport\sport\sport\obj\Debug\sport.csproj.SuggestedBindingRedirects.cache
+D:\smile\Project\DSport\sport\sport\obj\Debug\sport.FormLogin.resources
+D:\smile\Project\DSport\sport\sport\obj\Debug\sport.FormProfile.resources
+D:\smile\Project\DSport\sport\sport\obj\Debug\sport.FormApcl.resources
+D:\smile\Project\DSport\sport\sport\obj\Debug\sport.Formmain.resources
+D:\smile\Project\DSport\sport\sport\obj\Debug\sport.Properties.Resources.resources
+D:\smile\Project\DSport\sport\sport\obj\Debug\sport.csproj.GenerateResource.cache
+D:\smile\Project\DSport\sport\sport\obj\Debug\sport.csproj.CoreCompileInputs.cache
+D:\smile\Project\DSport\sport\sport\obj\Debug\sport.exe
+D:\smile\Project\DSport\sport\sport\obj\Debug\sport.pdb

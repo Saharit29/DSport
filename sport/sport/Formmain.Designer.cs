@@ -41,8 +41,9 @@
             this.btnSportApl = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.lbnameStatus = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbnameStatus = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -59,18 +60,21 @@
             this.panel1.Controls.Add(this.panelMenu);
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Controls.Add(this.panelLogo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(219, 549);
+            this.panel1.Size = new System.Drawing.Size(219, 753);
             this.panel1.TabIndex = 0;
             // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnLogout.ForeColor = System.Drawing.Color.Red;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnLogout.Location = new System.Drawing.Point(0, 479);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(217, 56);
@@ -83,8 +87,10 @@
             // 
             this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.btnHelp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnHelp.ForeColor = System.Drawing.Color.Lime;
+            this.btnHelp.FlatAppearance.BorderSize = 0;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnHelp.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnHelp.Location = new System.Drawing.Point(0, 423);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(217, 56);
@@ -96,7 +102,10 @@
             // 
             this.btnContact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.btnContact.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnContact.ForeColor = System.Drawing.Color.White;
+            this.btnContact.FlatAppearance.BorderSize = 0;
+            this.btnContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnContact.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnContact.Location = new System.Drawing.Point(0, 367);
             this.btnContact.Name = "btnContact";
             this.btnContact.Size = new System.Drawing.Size(217, 56);
@@ -122,7 +131,10 @@
             // 
             this.btnAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnAbout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAbout.ForeColor = System.Drawing.Color.White;
+            this.btnAbout.FlatAppearance.BorderSize = 0;
+            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnAbout.ForeColor = System.Drawing.Color.LightGray;
             this.btnAbout.Location = new System.Drawing.Point(0, 160);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(217, 40);
@@ -135,7 +147,10 @@
             // 
             this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnPrint.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnPrint.ForeColor = System.Drawing.Color.LightGray;
             this.btnPrint.Location = new System.Drawing.Point(0, 120);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(217, 40);
@@ -148,7 +163,10 @@
             // 
             this.btnProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProfile.ForeColor = System.Drawing.Color.White;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnProfile.ForeColor = System.Drawing.Color.LightGray;
             this.btnProfile.Location = new System.Drawing.Point(0, 80);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(217, 40);
@@ -161,7 +179,10 @@
             // 
             this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnHome.ForeColor = System.Drawing.Color.LightGray;
             this.btnHome.Location = new System.Drawing.Point(0, 40);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(217, 40);
@@ -174,7 +195,10 @@
             // 
             this.btnSportApl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnSportApl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSportApl.ForeColor = System.Drawing.Color.White;
+            this.btnSportApl.FlatAppearance.BorderSize = 0;
+            this.btnSportApl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSportApl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnSportApl.ForeColor = System.Drawing.Color.LightGray;
             this.btnSportApl.Location = new System.Drawing.Point(0, 0);
             this.btnSportApl.Name = "btnSportApl";
             this.btnSportApl.Size = new System.Drawing.Size(217, 40);
@@ -187,7 +211,10 @@
             // 
             this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.btnMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMenu.ForeColor = System.Drawing.Color.White;
+            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnMenu.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnMenu.Location = new System.Drawing.Point(0, 100);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(217, 56);
@@ -205,19 +232,9 @@
             this.panelLogo.Size = new System.Drawing.Size(217, 100);
             this.panelLogo.TabIndex = 0;
             // 
-            // lbnameStatus
-            // 
-            this.lbnameStatus.AutoSize = true;
-            this.lbnameStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lbnameStatus.Location = new System.Drawing.Point(708, 100);
-            this.lbnameStatus.Name = "lbnameStatus";
-            this.lbnameStatus.Size = new System.Drawing.Size(167, 69);
-            this.lbnameStatus.TabIndex = 1;
-            this.lbnameStatus.Text = "Hello";
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -227,12 +244,33 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lbnameStatus
+            // 
+            this.lbnameStatus.AutoSize = true;
+            this.lbnameStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbnameStatus.ForeColor = System.Drawing.Color.White;
+            this.lbnameStatus.Location = new System.Drawing.Point(515, 62);
+            this.lbnameStatus.Name = "lbnameStatus";
+            this.lbnameStatus.Size = new System.Drawing.Size(96, 39);
+            this.lbnameStatus.TabIndex = 1;
+            this.lbnameStatus.Text = "Hello";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(219, 609);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(991, 144);
+            this.panel2.TabIndex = 2;
+            // 
             // Formmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1679, 624);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.ClientSize = new System.Drawing.Size(1210, 753);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.lbnameStatus);
             this.Controls.Add(this.panel1);
             this.Name = "Formmain";
@@ -264,5 +302,6 @@
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnContact;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

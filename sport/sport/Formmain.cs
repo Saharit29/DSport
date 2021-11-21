@@ -101,6 +101,7 @@ namespace sport
             AC.currentname = AC.rd[1].ToString();
             lbnameStatus.Text = "| Welcome: " + AC.currentname + " " +
                               " Your Status is : " + AC.currentstatus + " |";
+            this.ForeColor = Color.LightGray;
 
             
         }

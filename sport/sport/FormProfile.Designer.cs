@@ -29,18 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radiofemaleOf = new System.Windows.Forms.RadioButton();
+            this.radiomaleOf = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioAdmin = new System.Windows.Forms.RadioButton();
             this.radioUser = new System.Windows.Forms.RadioButton();
             this.BdateTime = new System.Windows.Forms.DateTimePicker();
-            this.BdateOf = new System.Windows.Forms.DateTimePicker();
-            this.radiofemaleOf = new System.Windows.Forms.RadioButton();
-            this.radiomaleOf = new System.Windows.Forms.RadioButton();
             this.txtPasswordOf = new System.Windows.Forms.TextBox();
             this.txtUsernameOf = new System.Windows.Forms.TextBox();
             this.txtsurNameOf = new System.Windows.Forms.TextBox();
+            this.txtIDOf = new System.Windows.Forms.TextBox();
             this.txtPhoneOf = new System.Windows.Forms.TextBox();
             this.txtNameOf = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -60,24 +62,21 @@
             this.btnEditEm = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtIDOf = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbDateOf)).BeginInit();
             this.panel3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.BdateTime);
-            this.panel1.Controls.Add(this.BdateOf);
             this.panel1.Controls.Add(this.txtPasswordOf);
             this.panel1.Controls.Add(this.txtUsernameOf);
             this.panel1.Controls.Add(this.txtsurNameOf);
@@ -99,55 +98,20 @@
             this.panel1.Size = new System.Drawing.Size(557, 501);
             this.panel1.TabIndex = 0;
             // 
-            // groupBox1
+            // groupBox2
             // 
-            this.groupBox1.Controls.Add(this.radioAdmin);
-            this.groupBox1.Controls.Add(this.radioUser);
-            this.groupBox1.Location = new System.Drawing.Point(245, 295);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 58);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            // 
-            // radioAdmin
-            // 
-            this.radioAdmin.AutoSize = true;
-            this.radioAdmin.Location = new System.Drawing.Point(19, 21);
-            this.radioAdmin.Name = "radioAdmin";
-            this.radioAdmin.Size = new System.Drawing.Size(66, 20);
-            this.radioAdmin.TabIndex = 2;
-            this.radioAdmin.TabStop = true;
-            this.radioAdmin.Text = "Admin";
-            this.radioAdmin.UseVisualStyleBackColor = true;
-            // 
-            // radioUser
-            // 
-            this.radioUser.AutoSize = true;
-            this.radioUser.Location = new System.Drawing.Point(110, 21);
-            this.radioUser.Name = "radioUser";
-            this.radioUser.Size = new System.Drawing.Size(57, 20);
-            this.radioUser.TabIndex = 2;
-            this.radioUser.TabStop = true;
-            this.radioUser.Text = "User";
-            this.radioUser.UseVisualStyleBackColor = true;
-            // 
-            // BdateTime
-            // 
-            this.BdateTime.Location = new System.Drawing.Point(44, 381);
-            this.BdateTime.Name = "BdateTime";
-            this.BdateTime.Size = new System.Drawing.Size(200, 22);
-            this.BdateTime.TabIndex = 3;
-            // 
-            // BdateOf
-            // 
-            this.BdateOf.Location = new System.Drawing.Point(44, 381);
-            this.BdateOf.Name = "BdateOf";
-            this.BdateOf.Size = new System.Drawing.Size(200, 22);
-            this.BdateOf.TabIndex = 3;
+            this.groupBox2.Controls.Add(this.radiofemaleOf);
+            this.groupBox2.Controls.Add(this.radiomaleOf);
+            this.groupBox2.Location = new System.Drawing.Point(44, 295);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(185, 58);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
             // 
             // radiofemaleOf
             // 
             this.radiofemaleOf.AutoSize = true;
+            this.radiofemaleOf.ForeColor = System.Drawing.Color.LightGray;
             this.radiofemaleOf.Location = new System.Drawing.Point(75, 21);
             this.radiofemaleOf.Name = "radiofemaleOf";
             this.radiofemaleOf.Size = new System.Drawing.Size(51, 20);
@@ -159,6 +123,7 @@
             // radiomaleOf
             // 
             this.radiomaleOf.AutoSize = true;
+            this.radiomaleOf.ForeColor = System.Drawing.Color.LightGray;
             this.radiomaleOf.Location = new System.Drawing.Point(6, 21);
             this.radiomaleOf.Name = "radiomaleOf";
             this.radiomaleOf.Size = new System.Drawing.Size(46, 20);
@@ -166,6 +131,47 @@
             this.radiomaleOf.TabStop = true;
             this.radiomaleOf.Text = "ชาย";
             this.radiomaleOf.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioAdmin);
+            this.groupBox1.Controls.Add(this.radioUser);
+            this.groupBox1.Location = new System.Drawing.Point(254, 295);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 58);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            // 
+            // radioAdmin
+            // 
+            this.radioAdmin.AutoSize = true;
+            this.radioAdmin.ForeColor = System.Drawing.Color.LightGray;
+            this.radioAdmin.Location = new System.Drawing.Point(19, 21);
+            this.radioAdmin.Name = "radioAdmin";
+            this.radioAdmin.Size = new System.Drawing.Size(66, 20);
+            this.radioAdmin.TabIndex = 2;
+            this.radioAdmin.TabStop = true;
+            this.radioAdmin.Text = "Admin";
+            this.radioAdmin.UseVisualStyleBackColor = true;
+            // 
+            // radioUser
+            // 
+            this.radioUser.AutoSize = true;
+            this.radioUser.ForeColor = System.Drawing.Color.LightGray;
+            this.radioUser.Location = new System.Drawing.Point(110, 21);
+            this.radioUser.Name = "radioUser";
+            this.radioUser.Size = new System.Drawing.Size(57, 20);
+            this.radioUser.TabIndex = 2;
+            this.radioUser.TabStop = true;
+            this.radioUser.Text = "User";
+            this.radioUser.UseVisualStyleBackColor = true;
+            // 
+            // BdateTime
+            // 
+            this.BdateTime.Location = new System.Drawing.Point(44, 412);
+            this.BdateTime.Name = "BdateTime";
+            this.BdateTime.Size = new System.Drawing.Size(200, 22);
+            this.BdateTime.TabIndex = 3;
             // 
             // txtPasswordOf
             // 
@@ -188,6 +194,13 @@
             this.txtsurNameOf.Size = new System.Drawing.Size(111, 22);
             this.txtsurNameOf.TabIndex = 1;
             // 
+            // txtIDOf
+            // 
+            this.txtIDOf.Location = new System.Drawing.Point(44, 84);
+            this.txtIDOf.Name = "txtIDOf";
+            this.txtIDOf.Size = new System.Drawing.Size(111, 22);
+            this.txtIDOf.TabIndex = 1;
+            // 
             // txtPhoneOf
             // 
             this.txtPhoneOf.Location = new System.Drawing.Point(254, 84);
@@ -202,9 +215,20 @@
             this.txtNameOf.Size = new System.Drawing.Size(111, 22);
             this.txtNameOf.TabIndex = 1;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.LightGray;
+            this.label4.Location = new System.Drawing.Point(47, 259);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "เพศ";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.LightGray;
             this.label9.Location = new System.Drawing.Point(251, 276);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 16);
@@ -214,7 +238,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 348);
+            this.label5.ForeColor = System.Drawing.Color.LightGray;
+            this.label5.Location = new System.Drawing.Point(47, 377);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 16);
             this.label5.TabIndex = 0;
@@ -223,6 +248,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.LightGray;
             this.label8.Location = new System.Drawing.Point(251, 199);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 16);
@@ -232,7 +258,8 @@
             // lbStatus
             // 
             this.lbStatus.AutoSize = true;
-            this.lbStatus.Location = new System.Drawing.Point(436, 49);
+            this.lbStatus.ForeColor = System.Drawing.Color.LightGray;
+            this.lbStatus.Location = new System.Drawing.Point(431, 49);
             this.lbStatus.Name = "lbStatus";
             this.lbStatus.Size = new System.Drawing.Size(44, 16);
             this.lbStatus.TabIndex = 0;
@@ -241,6 +268,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.LightGray;
             this.label7.Location = new System.Drawing.Point(251, 125);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 16);
@@ -250,6 +278,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(41, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 16);
@@ -259,6 +288,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.LightGray;
             this.label6.Location = new System.Drawing.Point(251, 49);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 16);
@@ -268,6 +298,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(41, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 16);
@@ -277,6 +308,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(41, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 16);
@@ -285,7 +317,8 @@
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.btnSearchOf);
             this.panel2.Controls.Add(this.btnSearchAllOf);
             this.panel2.Controls.Add(this.tbDateOf);
@@ -297,22 +330,28 @@
             // 
             // btnSearchOf
             // 
+            this.btnSearchOf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnSearchOf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchOf.ForeColor = System.Drawing.Color.LightGray;
             this.btnSearchOf.Location = new System.Drawing.Point(309, 15);
             this.btnSearchOf.Name = "btnSearchOf";
             this.btnSearchOf.Size = new System.Drawing.Size(75, 23);
             this.btnSearchOf.TabIndex = 1;
             this.btnSearchOf.Text = "ค้นหา";
-            this.btnSearchOf.UseVisualStyleBackColor = true;
+            this.btnSearchOf.UseVisualStyleBackColor = false;
             this.btnSearchOf.Click += new System.EventHandler(this.btnSearchOf_Click);
             // 
             // btnSearchAllOf
             // 
+            this.btnSearchAllOf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnSearchAllOf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchAllOf.ForeColor = System.Drawing.Color.LightGray;
             this.btnSearchAllOf.Location = new System.Drawing.Point(390, 15);
             this.btnSearchAllOf.Name = "btnSearchAllOf";
             this.btnSearchAllOf.Size = new System.Drawing.Size(75, 23);
             this.btnSearchAllOf.TabIndex = 1;
             this.btnSearchAllOf.Text = "ค้าหาทั้งหมด";
-            this.btnSearchAllOf.UseVisualStyleBackColor = true;
+            this.btnSearchAllOf.UseVisualStyleBackColor = false;
             this.btnSearchAllOf.Click += new System.EventHandler(this.btnSearchAllOf_Click);
             // 
             // tbDateOf
@@ -328,53 +367,66 @@
             // 
             // txtSearchOf
             // 
-            this.txtSearchOf.Location = new System.Drawing.Point(192, 15);
+            this.txtSearchOf.Location = new System.Drawing.Point(22, 15);
             this.txtSearchOf.Name = "txtSearchOf";
-            this.txtSearchOf.Size = new System.Drawing.Size(111, 22);
+            this.txtSearchOf.Size = new System.Drawing.Size(281, 22);
             this.txtSearchOf.TabIndex = 1;
             // 
             // btnAddEm
             // 
+            this.btnAddEm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnAddEm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEm.ForeColor = System.Drawing.Color.LightGray;
             this.btnAddEm.Location = new System.Drawing.Point(44, 28);
             this.btnAddEm.Name = "btnAddEm";
             this.btnAddEm.Size = new System.Drawing.Size(75, 23);
             this.btnAddEm.TabIndex = 2;
             this.btnAddEm.Text = "เพิ่ม";
-            this.btnAddEm.UseVisualStyleBackColor = true;
+            this.btnAddEm.UseVisualStyleBackColor = false;
             this.btnAddEm.Click += new System.EventHandler(this.btnAddEm_Click);
             // 
             // btnDeleteEm
             // 
+            this.btnDeleteEm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnDeleteEm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteEm.ForeColor = System.Drawing.Color.LightGray;
             this.btnDeleteEm.Location = new System.Drawing.Point(185, 28);
             this.btnDeleteEm.Name = "btnDeleteEm";
             this.btnDeleteEm.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteEm.TabIndex = 2;
             this.btnDeleteEm.Text = "ลบ";
-            this.btnDeleteEm.UseVisualStyleBackColor = true;
+            this.btnDeleteEm.UseVisualStyleBackColor = false;
             this.btnDeleteEm.Click += new System.EventHandler(this.btnDeleteEm_Click);
             // 
             // btnEditEm
             // 
+            this.btnEditEm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnEditEm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditEm.ForeColor = System.Drawing.Color.LightGray;
             this.btnEditEm.Location = new System.Drawing.Point(317, 28);
             this.btnEditEm.Name = "btnEditEm";
             this.btnEditEm.Size = new System.Drawing.Size(75, 23);
             this.btnEditEm.TabIndex = 2;
             this.btnEditEm.Text = "แก้ไข";
-            this.btnEditEm.UseVisualStyleBackColor = true;
+            this.btnEditEm.UseVisualStyleBackColor = false;
             this.btnEditEm.Click += new System.EventHandler(this.btnEditEm_Click);
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ForeColor = System.Drawing.Color.LightGray;
             this.btnSave.Location = new System.Drawing.Point(448, 28);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "บันทึก";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.btnSave);
             this.panel3.Controls.Add(this.btnAddEm);
@@ -385,36 +437,11 @@
             this.panel3.Size = new System.Drawing.Size(557, 77);
             this.panel3.TabIndex = 3;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.radiofemaleOf);
-            this.groupBox2.Controls.Add(this.radiomaleOf);
-            this.groupBox2.Location = new System.Drawing.Point(44, 287);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(185, 58);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 259);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "เพศ";
-            // 
-            // txtIDOf
-            // 
-            this.txtIDOf.Location = new System.Drawing.Point(44, 84);
-            this.txtIDOf.Name = "txtIDOf";
-            this.txtIDOf.Size = new System.Drawing.Size(111, 22);
-            this.txtIDOf.TabIndex = 1;
-            // 
             // FormProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.ClientSize = new System.Drawing.Size(1172, 686);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -424,14 +451,14 @@
             this.Load += new System.EventHandler(this.FormProfile_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbDateOf)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -464,7 +491,6 @@
         private System.Windows.Forms.Button btnEditEm;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DateTimePicker BdateOf;
         private System.Windows.Forms.DateTimePicker BdateTime;
         private System.Windows.Forms.RadioButton radioUser;
         private System.Windows.Forms.RadioButton radioAdmin;
