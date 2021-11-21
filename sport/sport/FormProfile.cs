@@ -153,7 +153,7 @@ namespace sport
                 txtNameOf.Text = tbDateOf.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtsurNameOf.Text = tbDateOf.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtPhoneOf.Text = tbDateOf.Rows[e.RowIndex].Cells[3].Value.ToString();
-                BdateOf.Value = Convert.ToDateTime(tbDateOf.Rows[e.RowIndex].Cells[4].Value);
+                BdateTime.Value = Convert.ToDateTime(tbDateOf.Rows[e.RowIndex].Cells[4].Value);
                 stateGenter = tbDateOf.Rows[e.RowIndex].Cells[5].Value.ToString();
                 if (stateGenter == "ชาย")
                 {
@@ -423,7 +423,7 @@ namespace sport
             sqlEdit = " UPDATE tb_officer SET of_name='" + txtNameOf.Text
                 + "',of_surname='" + txtsurNameOf.Text
                 + "',of_phone='" + txtPhoneOf.Text
-                + "',of_b_date='" + BdateOf.Value
+                + "',of_b_date='" + BdateTime.Value
                 + "',of_gender='" + stateGenter
                 + "',username='" + txtUsernameOf.Text
                 + "',password='" + txtPasswordOf.Text

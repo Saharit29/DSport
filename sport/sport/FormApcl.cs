@@ -159,7 +159,7 @@ namespace sport
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            groupDataApcl.Enabled = true;
+            
             ClearAllApcl();
             
         }
@@ -176,7 +176,7 @@ namespace sport
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            groupDataApcl.Enabled = true;
+            
             string sqlEdit;
             OleDbCommand comEdit = new OleDbCommand();
             try
@@ -333,6 +333,8 @@ namespace sport
         {
             ShowAllApcl();
         }
+
+ 
     }
     
 }

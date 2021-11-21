@@ -42,6 +42,7 @@
             // btnlogin
             // 
             this.btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnlogin.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnlogin.Location = new System.Drawing.Point(472, 369);
@@ -63,6 +64,7 @@
             // btncancal
             // 
             this.btncancal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btncancal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncancal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btncancal.ForeColor = System.Drawing.Color.Gainsboro;
             this.btncancal.Location = new System.Drawing.Point(733, 369);
