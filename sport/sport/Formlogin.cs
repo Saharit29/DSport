@@ -97,7 +97,8 @@ namespace sport
                 while (AC.rd.Read())
                 {
                     AC.currentusername = AC.rd[1].ToString();
-                    
+                    AC.currentid = AC.rd[0].ToString();
+
                     MessageBox.Show("Welcome " + AC.currentusername + "(^_^)", "login Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     Formmain frm = new Formmain();
