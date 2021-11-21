@@ -26,3 +26,4 @@ D:\smile\Project\DSport\sport\sport\obj\Debug\sport.csproj.GenerateResource.cach
 D:\smile\Project\DSport\sport\sport\obj\Debug\sport.csproj.CoreCompileInputs.cache
 D:\smile\Project\DSport\sport\sport\obj\Debug\sport.exe
 D:\smile\Project\DSport\sport\sport\obj\Debug\sport.pdb
+D:\smile\Project\DSport\sport\sport\obj\Debug\sport.FormPrint.resources

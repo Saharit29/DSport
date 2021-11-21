@@ -22,6 +22,7 @@ namespace sport
         
         FormLogin foLogin = new FormLogin();
         FormApcl foApcl = new FormApcl();
+        
         AC ocn = new AC();
 
         private void customizeDesing()
@@ -81,6 +82,15 @@ namespace sport
         private void btnPrint_Click(object sender, EventArgs e)
         {
             PsubMenu();
+            if (ocn.CloseChildForm(this, "FormPrint") == false)
+            {
+                
+
+                FormPrint Frm = new FormPrint();
+
+                Frm.Show();
+            }
+
         }
 
         private void btnAbout_Click(object sender, EventArgs e)
