@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridAplc = new System.Windows.Forms.DataGridView();
             this.btnPrint = new System.Windows.Forms.Button();
+            this.dataGridAplc = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAplc)).BeginInit();
             this.SuspendLayout();
@@ -40,20 +40,10 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Controls.Add(this.dataGridAplc);
-            this.panel1.Location = new System.Drawing.Point(12, 52);
+            this.panel1.Location = new System.Drawing.Point(39, 59);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(702, 636);
             this.panel1.TabIndex = 0;
-            // 
-            // dataGridAplc
-            // 
-            this.dataGridAplc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAplc.Location = new System.Drawing.Point(35, 31);
-            this.dataGridAplc.Name = "dataGridAplc";
-            this.dataGridAplc.RowHeadersWidth = 51;
-            this.dataGridAplc.RowTemplate.Height = 24;
-            this.dataGridAplc.Size = new System.Drawing.Size(627, 529);
-            this.dataGridAplc.TabIndex = 0;
             // 
             // btnPrint
             // 
@@ -67,6 +57,16 @@
             this.btnPrint.TabIndex = 1;
             this.btnPrint.Text = "พิมพ์";
             this.btnPrint.UseVisualStyleBackColor = false;
+            // 
+            // dataGridAplc
+            // 
+            this.dataGridAplc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAplc.Location = new System.Drawing.Point(35, 31);
+            this.dataGridAplc.Name = "dataGridAplc";
+            this.dataGridAplc.RowHeadersWidth = 51;
+            this.dataGridAplc.RowTemplate.Height = 24;
+            this.dataGridAplc.Size = new System.Drawing.Size(627, 529);
+            this.dataGridAplc.TabIndex = 0;
             // 
             // FormPrint
             // 

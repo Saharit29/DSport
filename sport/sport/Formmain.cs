@@ -82,11 +82,11 @@ namespace sport
         private void btnPrint_Click(object sender, EventArgs e)
         {
             PsubMenu();
-            if (ocn.CloseChildForm(this, "FormPrint") == false)
+            if (ocn.CloseChildForm(this, "FormFilterApp") == false)
             {
-                
 
-                FormPrint Frm = new FormPrint();
+
+                FormFilterApp Frm = new FormFilterApp();
 
                 Frm.Show();
             }

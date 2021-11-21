@@ -20,7 +20,10 @@ namespace sport
             InitializeComponent();
         }
         OleDbDataAdapter da;
-       
+        DataSet dsSport = new DataSet();
+        DataSet dsFather = new DataSet();
+        DataSet dsMother = new DataSet();
+        string sSport, sMother, sFather, sOfficer;
         string stateGenter = "";
 
         AC ocn = new AC();
@@ -48,7 +51,6 @@ namespace sport
 
         private void FormApcl_Load(object sender, EventArgs e)
         {
-            
            
             if (AC.con.State == ConnectionState.Open)
             {
@@ -105,6 +107,7 @@ namespace sport
 
         }
 
+     
         private void TbApcldata_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex == TbApcldata.Rows.Count - 1)
@@ -113,22 +116,99 @@ namespace sport
             }
             try
             {
-                txtApclidnumber.Text = TbApcldata.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtApclname.Text = TbApcldata.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtApclsurname.Text = TbApcldata.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtApclntointy.Text = TbApcldata.Rows[e.RowIndex].Cells[4].Value.ToString();
-                txtApclemail.Text = TbApcldata.Rows[e.RowIndex].Cells[5].Value.ToString();
-                txtApclphone.Text = TbApcldata.Rows[e.RowIndex].Cells[6].Value.ToString();
-                txtApclHonum.Text = TbApcldata.Rows[e.RowIndex].Cells[7].Value.ToString();
-                txtApclswine.Text = TbApcldata.Rows[e.RowIndex].Cells[8].Value.ToString();
-                txtApcldistrist.Text = TbApcldata.Rows[e.RowIndex].Cells[9].Value.ToString();
-                txtApclstreet.Text = TbApcldata.Rows[e.RowIndex].Cells[10].Value.ToString();
-                txtApclprovince.Text = TbApcldata.Rows[e.RowIndex].Cells[11].Value.ToString();
-                txtApclsub_dstrict.Text = TbApcldata.Rows[e.RowIndex].Cells[12].Value.ToString();
+                txtAppID.Text = TbApcldata.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtAppName.Text = TbApcldata.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtAppSurname.Text = TbApcldata.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtAppNationality.Text = TbApcldata.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtAppEmail.Text = TbApcldata.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtAppPhone.Text = TbApcldata.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtAppHomeNumber.Text = TbApcldata.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txtAppMoo.Text = TbApcldata.Rows[e.RowIndex].Cells[8].Value.ToString();
+                txtAppDistrict.Text = TbApcldata.Rows[e.RowIndex].Cells[9].Value.ToString();
+                txtAppStreet.Text = TbApcldata.Rows[e.RowIndex].Cells[10].Value.ToString();
+                txtAppProvince.Text = TbApcldata.Rows[e.RowIndex].Cells[11].Value.ToString();
+                txtAppSubDistrict.Text = TbApcldata.Rows[e.RowIndex].Cells[12].Value.ToString();
                 Apclb_date.Value = Convert.ToDateTime(TbApcldata.Rows[e.RowIndex].Cells[13].Value);
                 Apcldate.Value = Convert.ToDateTime(TbApcldata.Rows[e.RowIndex].Cells[14].Value);
+
                 
-                
+
+                sSport = TbApcldata.Rows[e.RowIndex].Cells[15].Value.ToString();
+                sMother = TbApcldata.Rows[e.RowIndex].Cells[16].Value.ToString();
+                sFather = TbApcldata.Rows[e.RowIndex].Cells[17].Value.ToString();
+                if (sSport != "")
+                {
+                    DataSet sport = new DataSet();
+                    string sSql = "select * from tb_sport";
+                    OleDbCommand scmd = new OleDbCommand();
+                    OleDbDataAdapter sda;
+                    sda = new OleDbDataAdapter(sSql, AC.con);
+                    sda.Fill(sport, "tb_sport");
+
+                    if (sport.Tables["tb_sport"].Rows.Count != 0)
+                    {
+                        txtidsport.Text = sSport;
+                        txtsportname.Text = sport.Tables["tb_sport"].Rows[0]["sp_name"].ToString();
+                        txtsporttype.Text = sport.Tables["tb_sport"].Rows[0]["sp_type"].ToString();
+                    }
+
+                }
+                if (sMother != "")
+                {
+                    DataSet mother = new DataSet();
+                    string sSql = "select * from tb_mother";
+                    OleDbCommand scmd = new OleDbCommand();
+                    OleDbDataAdapter sda;
+                    sda = new OleDbDataAdapter(sSql, AC.con);
+                    sda.Fill(mother, "tb_mother");
+
+                    if (mother.Tables["tb_mother"].Rows.Count != 0)
+                    {
+                        txtMotherID.Text = mother.Tables["tb_mother"].Rows[0]["id_nbmother"].ToString();
+                        txtMotherName.Text = mother.Tables["tb_mother"].Rows[0]["mo_name"].ToString();
+                        txtMotherSurname.Text = mother.Tables["tb_mother"].Rows[0]["mo_surname"].ToString();
+                        txtMotherNationality.Text = mother.Tables["tb_mother"].Rows[0]["mo_ntionty"].ToString();
+                        dtpBirthDateMother.Value = Convert.ToDateTime(mother.Tables["tb_mother"].Rows[0]["mo_b_date"].ToString());
+                        txtMotherEmail.Text = mother.Tables["tb_mother"].Rows[0]["mo_email"].ToString();
+                        txtMotherPhone.Text = mother.Tables["tb_mother"].Rows[0]["mo_phone"].ToString();
+                        txtMotherHomeNumber.Text = mother.Tables["tb_mother"].Rows[0]["mo_honum"].ToString();
+                        txtMotherMoo.Text = mother.Tables["tb_mother"].Rows[0]["mo_swine"].ToString();
+                        txtMotherDistrict.Text = mother.Tables["tb_mother"].Rows[0]["mo_district"].ToString();
+                        txtMotherStreet.Text = mother.Tables["tb_mother"].Rows[0]["mo_street"].ToString();
+                        txtMotherProvince.Text = mother.Tables["tb_mother"].Rows[0]["mo_province"].ToString();
+                        txtMotherSubDistrict.Text = mother.Tables["tb_mother"].Rows[0]["mo_sub_district"].ToString();
+
+                    }
+                }
+                if (sFather != "")
+                {
+                     DataSet father = new DataSet();
+                    string sSql = "select * from tb_father";
+                    OleDbCommand scmd = new OleDbCommand();
+                    OleDbDataAdapter sda;
+                    sda = new OleDbDataAdapter(sSql, AC.con);
+                    sda.Fill(father, "tb_father");
+
+                    if (father.Tables["tb_father"].Rows.Count != 0)
+                    {
+                        txtFatherID.Text = father.Tables["tb_father"].Rows[0]["id_nbfather"].ToString();
+                        txtFatherName.Text = father.Tables["tb_father"].Rows[0]["ft_name"].ToString();
+                        txtFatherSurname.Text = father.Tables["tb_father"].Rows[0]["ft_surname"].ToString();
+                        txtFatherNationality.Text = father.Tables["tb_father"].Rows[0]["ft_ntionty"].ToString();
+                        dtpBirthDateMother.Value = Convert.ToDateTime(father.Tables["tb_father"].Rows[0]["ftb_date"].ToString());
+                        txtFatherEmail.Text = father.Tables["tb_father"].Rows[0]["ft_email"].ToString();
+                        txtFatherPhone.Text = father.Tables["tb_father"].Rows[0]["ft_phone"].ToString();
+                        txtFatherHomeNumber.Text = father.Tables["tb_father"].Rows[0]["ft_honum"].ToString();
+                        txtFatherMoo.Text = father.Tables["tb_father"].Rows[0]["ft_swine"].ToString();
+                        txtFatherDistrict.Text = father.Tables["tb_father"].Rows[0]["ft_district"].ToString();
+                        txtFatherStreet.Text = father.Tables["tb_father"].Rows[0]["ft_street"].ToString();
+                        txtFatherProvince.Text = father.Tables["tb_father"].Rows[0]["ft_province"].ToString();
+                        txtFatherSubDistrict.Text = father.Tables["tb_father"].Rows[0]["ft_sub_district"].ToString();
+                    }
+                }
+                //sOfficer = TbApcldata.Rows[e.RowIndex].Cells[18].Value.ToString();
+
+
             }
             catch
             {
@@ -137,25 +217,59 @@ namespace sport
         }
             private void ClearAllApcl()
             {
-                txtApclidnumber.Text = "";
-                txtApclname.Text = "";
-                txtApclsurname.Text = "";
-                radioMale.Checked = false;
-                radioFemale.Checked = false;
-                txtApclntointy.Text = "";
-                txtApclemail.Text = "";
-                txtApclphone.Text = "";
-                txtApclHonum.Text = "";
-                txtApclswine.Text = "";
-                txtApcldistrist.Text = "";
-                txtApclstreet.Text = "";
-                txtApclprovince.Text = "";
-                txtApclsub_dstrict.Text = "";
+                txtAppID.Text = "";
+                txtAppName.Text = "";
+                txtAppSurname.Text = "";
+                rdbMale.Checked = false;
+                rdbFemale.Checked = false;
+                txtAppNationality.Text = "";
+                txtAppEmail.Text = "";
+                txtAppPhone.Text = "";
+                txtAppHomeNumber.Text = "";
+                txtAppMoo.Text = "";
+                txtAppDistrict.Text = "";
+                txtAppStreet.Text = "";
+                txtAppProvince.Text = "";
+                txtAppSubDistrict.Text = "";
                 Apclb_date.Value = DateTime.Now;
                 Apcldate.Value = DateTime.Now;
                 Apclimg.Image = null;
-                txtApclidnumber.Focus();
-            }
+                txtAppID.Focus();
+
+                txtMotherID.Text = "";
+                txtMotherName.Text = "";
+                txtMotherSurname.Text = "";
+                txtMotherNationality.Text = "";
+                dtpBirthDateMother.Value = DateTime.Now;
+                txtMotherEmail.Text = "";
+                txtMotherPhone.Text = "";
+                txtMotherHomeNumber.Text = "";
+                txtMotherMoo.Text = "";
+                txtMotherDistrict.Text = "";
+                txtMotherStreet.Text = "";
+                txtMotherProvince.Text = "";
+                txtMotherSubDistrict.Text = "";
+
+                txtFatherID.Text = "";
+                txtFatherName.Text  = "";
+                txtFatherSurname.Text  = "";
+                txtFatherNationality.Text  = "";
+                dtpBirthDateMother.Value = DateTime.Now;
+                txtFatherEmail.Text  = "";
+                txtFatherPhone.Text  = "";
+                txtFatherHomeNumber.Text  = "";
+                txtFatherMoo.Text  = "";
+                txtFatherDistrict.Text  = "";
+                txtFatherStreet.Text  = "";
+                txtFatherProvince.Text  = "";
+                txtFatherSubDistrict.Text  = "";
+
+                txtidsport.Text = "";
+                txtsportname.Text = "";
+                txtsporttype.Text = "";
+                
+
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -163,9 +277,9 @@ namespace sport
             ClearAllApcl();
             
         }
-        private void checkStateGender()
+        private void prvCheckStateGender()
         {
-            if (radioMale.Checked == true)
+            if (rdbMale.Checked == true)
             {
                 stateGenter = "ชาย";
             }
@@ -176,82 +290,236 @@ namespace sport
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            
+            prvCheckStateGender();
             string sqlEdit;
             OleDbCommand comEdit = new OleDbCommand();
             try
             {
                 if (MessageBox.Show("คุณต้องอยากเพิ่งข้อมูล ใช่หรือไม่", "ยืนยีน", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    sqlEdit = "update tb_applicant set aplc_name = '" + txtApclname.Text + 
-                        "',aplc_surname = '" + txtApclsurname.Text +
+                    sqlEdit = "update tb_applicant set aplc_name = '" + txtAppName.Text + 
+                        "',aplc_surname = '" + txtAppSurname.Text +
                         "',aplc_gender = '" + stateGenter +
-                        "' ,aplc_nationality = '" + txtApclntointy.Text + 
-                        "',aplc_Email = '" + txtApclemail.Text + 
-                        "',aplc_phone = '" + txtApclphone.Text +
-                        "',aplc_honum = '" + txtApclHonum.Text +
-                        "',aplc_swine = '" + txtApclswine.Text +
-                        "',aplc_district = '" + txtApcldistrist.Text +
-                        "',aplc_street = '" + txtApclstreet.Text +
-                        "',aplc_province = '" + txtApclprovince.Text +
-                        "',aplc_sub_district = '" + txtApclsub_dstrict.Text +
-                        "',aplcb_date = '" + Apclb_date.Value +
-                        "',aplica_date = '" + Apcldate.Value +
-                        "', = '" + txtApclphone.Text +
-                        "'where id_numberaplc = '" + txtApclidnumber.Text + "'";
+                        "',aplc_nationality = '" + txtAppNationality.Text + 
+                        "',aplc_Email = '" + txtAppEmail.Text + 
+                        "',aplc_phone = '" + txtAppPhone.Text +
+                        "',aplc_honum = '" + txtAppHomeNumber.Text +
+                        "',aplc_swine = '" + txtAppMoo.Text +
+                        "',aplc_district = '" + txtAppDistrict.Text +
+                        "',aplc_street = '" + txtAppStreet.Text +
+                        "',aplc_province = '" + txtAppProvince.Text +
+                        "',aplc_sub_district = '" + txtAppSubDistrict.Text +
+                        "',aplcb_date = '" + Apclb_date.Value.ToString() +
+                        "',aplica_date = '" + Apcldate.Value.ToString() +
+                        "',id_sport = '" + txtidsport.Text +
+                        "',id_nbmother = '" + txtMotherID.Text +
+                        "',id_nbfather = '" + txtFatherID.Text +
+                        "',id_officer= '" + AC.currentid +
+                        "'where id_numberaplc = '" + txtAppID.Text + "'";
 
-                    if (AC.con.State == ConnectionState.Open)
-                    {
-                        AC.con.Close();
-                    }
+                    AC.closeConnection();
                     AC.openConnection();
-                    AC.con.Open();
 
                     comEdit.CommandType = CommandType.Text;
                     comEdit.CommandText = sqlEdit;
                     comEdit.Connection = AC.con;
                     comEdit.ExecuteNonQuery();
 
+
+                    sqlEdit = "update tb_mother set mo_name = '" + txtMotherName.Text +
+                        "',mo_surname = '" + txtMotherSurname.Text +
+                        "',mo_ntionty = '" + txtMotherNationality.Text +
+                        "',mo_b_date = '" + dtpBirthDateMother.Value.ToString() +
+                        "',mo_email = '" + txtMotherEmail.Text +
+                        "',mo_phone = '" + txtMotherPhone.Text +
+                        "',mo_honum = '" + txtMotherHomeNumber.Text +
+                        "',mo_swine = '" + txtMotherMoo.Text +
+                        "',mo_district = '" + txtMotherDistrict.Text +
+                        "',mo_street = '" + txtMotherStreet.Text +
+                        "',mo_province = '" + txtMotherProvince.Text +
+                        "',mo_sub_district = '" + txtMotherSubDistrict.Text +
+                        "' where id_nbmother = '" + txtMotherID.Text + "'";
+
+                    AC.closeConnection();
+                    AC.openConnection();
+                    OleDbCommand mcmd = new OleDbCommand();
+
+                    mcmd.CommandType = CommandType.Text;
+                    mcmd.CommandText = sqlEdit;
+                    mcmd.Connection = AC.con;
+                    mcmd.ExecuteNonQuery();
+
+
+                    sqlEdit = "update tb_father set ft_name='" + txtFatherName.Text +
+                        "',ft_surname='" + txtFatherSurname.Text +
+                        "',ft_ntionty='" + txtFatherNationality.Text +
+                        "',ftb_date='" + dtpBirthDateFather.Value.ToString() +
+                        "',ft_email = '" + txtFatherEmail.Text +
+                        "',ft_phone = '" + txtFatherPhone.Text +
+                        "',ft_honum = '" + txtFatherHomeNumber.Text +
+                        "',ft_swine = '" + txtFatherMoo.Text +
+                        "',ft_district = '" + txtFatherDistrict.Text +
+                        "',ft_street = '" + txtFatherStreet.Text +
+                        "',ft_province = '" + txtFatherProvince.Text +
+                        "',ft_sub_district = '" + txtFatherSubDistrict.Text +
+                        "' where id_nbfather = '" + txtFatherID.Text + "'";
+
+                    AC.closeConnection();
+                    AC.openConnection();
+                    OleDbCommand fcmd = new OleDbCommand();
+
+                    fcmd.CommandType = CommandType.Text;
+                    fcmd.CommandText = sqlEdit;
+                    fcmd.Connection = AC.con;
+                    fcmd.ExecuteNonQuery();
+
                     MessageBox.Show("แก้ไขข้อมูลเรียบร้อยแล้ว");
                     ClearAllApcl();
                     ShowAllApcl();
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("ข้อมูลผิดพลาด");
+                MessageBox.Show("ข้อมูลผิดพลาด"+ex.Message);
             }
+        }
+
+
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {   
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-             
-             string sqlAddApcl = "";
-             try
-             {
-                 if (MessageBox.Show("เพิ่มข้อมูลใช่หรือไม่", "เพิ่มข้อมูล", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                 {
-                     sqlAddApcl = " INSERT INTO tb_applicant(id_numberaplc,aplc_name,aplc_surname,aplc_gender,aplc_nationality" +
-                         ",aplc_Email,aplc_phone,aplc_honum,aplc_swine,aplc_district,aplc_street,aplc_province,aplc_sub_district" +
-                         ",aplcb_date,aplica_date,aplc_img) VALUES('" + txtApclidnumber.Text + "','" + txtApclname.Text + "','" + txtApclsurname.Text + "'" +
-                         ",'" + stateGenter + "','" + txtApclntointy.Text + "','" + txtApclemail.Text + "','" + txtApclphone.Text + "'," +
-                         "'" + txtApclHonum.Text + "','" + txtApclswine.Text + "','" + txtFtdistrict.Text + "','" + txtApclstreet.Text + "'," +
-                         "'" + txtApclprovince.Text + "','" + txtApclsub_dstrict.Text + "','" + Apclb_date.Value + "','" + Apcldate.Text + "')";
+            prvCheckStateGender();
+            string sqlAddApcl = "";
+            try
+            {
+                AC.closeConnection();
+                AC.openConnection();
 
-                    if (AC.con.State == ConnectionState.Open)
+                if (MessageBox.Show("เพิ่มข้อมูลใช่หรือไม่", "เพิ่มข้อมูล", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    DataSet dsCheck = new DataSet();
+
+                    string sSql = "select * from tb_applicant where id_numberaplc='" + txtAppID.Text + "'";
+
+                    dsCheck = ocn.pudsLoadData(sSql, "tb_applicant", dsCheck);
+
+                    if (dsCheck.Tables["tb_applicant"].Rows.Count != 0)
                     {
-                        AC.con.Close();
+                        MessageBox.Show("กรุณากรอกข้อมูลรหัสผู้สมัครที่ไม่ซ้ำกับผู้อื่น", "ซ้ำ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
                     }
 
+
+                    sqlAddApcl = " INSERT INTO tb_applicant(id_numberaplc,aplc_name,aplc_surname,aplc_gender,aplc_nationality" +
+                        ",aplc_Email,aplc_phone,aplc_honum,aplc_swine,aplc_district,aplc_street,aplc_province,aplc_sub_district" +
+                        ",aplcb_date,aplica_date,id_sport, id_nbmother, id_nbfather, id_officer) VALUES('"
+                        + txtAppID.Text + "','"
+                        + txtAppName.Text + "','"
+                        + txtAppSurname.Text + "','"
+                        + stateGenter + "','"
+                        + txtAppNationality.Text + "','"
+                        + txtAppEmail.Text + "','"
+                        + txtAppPhone.Text + "','"
+                        + txtAppHomeNumber.Text + "','"
+                        + txtAppMoo.Text + "','"
+                        + txtMotherDistrict.Text + "','"
+                        + txtAppStreet.Text + "','"
+                        + txtAppProvince.Text + "','"
+                        + txtAppSubDistrict.Text + "','"
+                        + Apclb_date.Value.ToString() + "','"
+                        + Apcldate.Value.ToString() + "','"
+                        + txtidsport.Text + "','"
+                        + txtMotherID.Text + "','"
+                        + txtFatherID.Text + "','"
+                        + AC.currentid
+                        + "')";
+
+                    OleDbCommand acmd = new OleDbCommand();
+                    acmd.CommandType = CommandType.Text;
+                    acmd.CommandText = sqlAddApcl;
+                    acmd.Connection = AC.con;
+                    acmd.ExecuteNonQuery();
+
+                    AC.closeConnection();
                     AC.openConnection();
-                    AC.con.Open();
 
-                    
-                    AC.cmd.CommandType = CommandType.Text;
-                    AC.cmd.CommandText = sqlAddApcl;
-                    AC.cmd.Connection = AC.con;
-                    AC.cmd.ExecuteNonQuery();
 
+
+                    DataSet dsCheck2 = new DataSet();
+
+                    string sSql2 = "select * from tb_mother where id_nbmother='" + txtMotherID.Text + "'";
+
+                    dsCheck2 = ocn.pudsLoadData(sSql2, "tb_mother", dsCheck2);
+
+                    if (dsCheck2.Tables["tb_mother"].Rows.Count == 0)
+                    {
+                        // ======================================== mother ==========================
+                        AC.closeConnection();
+                        AC.openConnection();
+
+                        sqlAddApcl = " INSERT INTO tb_mother(id_nbmother,mo_name,mo_surname, mo_ntionty,mo_b_date, mo_email,mo_phone,mo_honum,mo_swine,mo_district,mo_street,mo_province,mo_sub_district) values('"
+                            + txtMotherID.Text + "','"
+                            + txtMotherName.Text + "','"
+                            + txtMotherSurname.Text + "','"
+                            + txtMotherNationality.Text + "','"
+                            + dtpBirthDateMother.Value.ToString() + "','"
+                            + txtMotherEmail.Text + "','"
+                            + txtMotherPhone.Text + "','"
+                            + txtMotherHomeNumber.Text + "','"
+                            + txtMotherMoo.Text + "','"
+                            + txtMotherDistrict.Text + "','"
+                            + txtMotherStreet.Text + "','"
+                            + txtMotherProvince.Text + "','"
+                            + txtMotherSubDistrict.Text
+                            + "')";
+
+                        OleDbCommand mcmd = new OleDbCommand();
+                        mcmd.CommandType = CommandType.Text;
+                        mcmd.CommandText = sqlAddApcl;
+                        mcmd.Connection = AC.con;
+                        mcmd.ExecuteNonQuery();
+                    }
+
+                    DataSet dsCheck3 = new DataSet();
+
+                    string sSql3 = "select * from tb_father where id_nbfather='" + txtFatherID.Text + "'";
+
+                    dsCheck3 = ocn.pudsLoadData(sSql3, "tb_father", dsCheck3);
+
+                    if (dsCheck3.Tables["tb_father"].Rows.Count == 0)
+                    {
+                        // ============================================== Father =============================================
+                        AC.closeConnection();
+                        AC.openConnection();
+
+                        sqlAddApcl = " INSERT INTO tb_tb_father(id_nbfater,ft_name,ft_surname, ft_ntionty,ftb_date, ft_email,ft_phone,ft_honum,ft_swine,ft_district,ft_street,ft_province,ft_sub_district) values('"
+                            + txtFatherID.Text + "','"
+                            + txtFatherName.Text + "','"
+                            + txtFatherSurname.Text + "','"
+                            + txtFatherNationality.Text + "','"
+                            + dtpBirthDateMother.Value.ToString() + "','"
+                            + txtFatherEmail.Text + "','"
+                            + txtFatherPhone.Text + "','"
+                            + txtFatherHomeNumber.Text + "','"
+                            + txtFatherMoo.Text + "','"
+                            + txtFatherDistrict.Text + "','"
+                            + txtFatherStreet.Text + "','"
+                            + txtFatherProvince.Text + "','"
+                            + txtAppSubDistrict
+                            + "')";
+
+                        OleDbCommand fcmd = new OleDbCommand();
+                        fcmd.CommandType = CommandType.Text;
+                        fcmd.CommandText = sqlAddApcl;
+                        fcmd.Connection = AC.con;
+                        fcmd.ExecuteNonQuery();
+                    }
 
                     MessageBox.Show("ได้บันทึกข้อมูลเรียบร้อยแล้ว", "ผลการดำเนินการ");
 
@@ -259,17 +527,12 @@ namespace sport
                     ClearAllApcl();
                     ShowAllApcl();
 
-                 }
-             }
-             catch (Exception ex)
-             {
-                 MessageBox.Show("ไม่สามารถติดต่อฐานข้อมูลได้:" + ex.Message, "ผิดพลาด");
-             }
-             
-        }
-
-        private void btnSelect_Click(object sender, EventArgs e)
-        {   
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ไม่สามารถติดต่อฐานข้อมูลได้:" + ex.Message, "ผิดพลาด");
+            }
 
         }
 
@@ -277,12 +540,12 @@ namespace sport
         {
             try
             {
-                if (txtApclidnumber.Text == "")
+                if (txtAppID.Text == "")
                 {
                     MessageBox.Show("กรุณาเลือกข้อมูลที่จะลบ", "ผิดพลาด");
                     return;
                 }
-                String sqlDel = "delete from tb_applicant where id_numberaplc = '" + txtApclidnumber.Text + "'";
+                String sqlDel = "delete from tb_applicant where id_numberaplc = '" + txtAppID.Text + "'";
                 if (AC.con.State == ConnectionState.Open)
                 {
                     AC.con.Close();

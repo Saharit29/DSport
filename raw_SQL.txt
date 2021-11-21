@@ -1,0 +1,6 @@
+
+id_numberaplc,aplc_name,aplc_surname,aplc_gender,aplc_nationality,
+aplc_nationality,aplc_phone,aplc_honum,aplc_swine,aplc_district,aplc_street,
+aplc_province,aplc_sub_district,aplcb_date,aplica_date,id_sport,id_nbmother,id_nbfather,id_officer
+
+id_officer,of_name,of_surname,of_phone,of_b_date,of_gender,username,password,status

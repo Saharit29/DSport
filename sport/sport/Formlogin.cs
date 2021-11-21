@@ -72,7 +72,7 @@ namespace sport
             {
                 if ((string.IsNullOrEmpty(this.txtusername.Text.Trim())) || (string.IsNullOrEmpty(this.txtpassword.Text.Trim())))
                 {
-                    MessageBox.Show("Please is input your uaername and password.", "Data Entry Erorr : iBasskung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Please is input your uaername and password.", "Data Entry Erorr", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                     if (this.txtusername.CanSelect)
                     {
@@ -97,7 +97,8 @@ namespace sport
                 while (AC.rd.Read())
                 {
                     AC.currentusername = AC.rd[1].ToString();
-                    
+                    AC.currentid = AC.rd[0].ToString();
+
                     MessageBox.Show("Welcome " + AC.currentusername + "(^_^)", "login Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     Formmain frm = new Formmain();
