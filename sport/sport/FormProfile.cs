@@ -21,9 +21,11 @@ namespace sport
         OleDbDataAdapter da;
         string sSql;
         string stateGenter = "";
-        
+        bool bCheck = false;
         string stateStatus;
         AC ocn = new AC();
+        string sGender = "";
+        string sStatus = "";
 
         private void FormProfile_Load(object sender, EventArgs e)
         {
@@ -42,7 +44,7 @@ namespace sport
 
                 lbStatus.Hide();
                 
-                prvShowAllMember();
+                prvShowAllOfficer();
                 prvFormatDataEmployee();
 
                 
@@ -50,33 +52,14 @@ namespace sport
                 tbDateOf.ReadOnly = true;
             }
         }
-        private void prvShowAllMember()
+        private void prvShowAllOfficer()
         {
+            bCheck = false;
+
+            AC.openConnection();
             string sSqlOf = "select * from tb_officer";
-            
-
-            /*if (AC.IsFind == true)
-            {
-                AC.ds.Tables["tb_officer"].Clear();
-            }
-
-            da = new OleDbDataAdapter(sSqlOf, AC.con);
-            da.Fill(AC.ds, "tb_officer");
-            if (AC.ds.Tables["tb_officer"].Rows.Count != 0)
-            {
-                AC.IsFind = true;
-                tbDateOf.ReadOnly = true;
-                tbDateOf.DataSource = AC.ds.Tables["td_officer"];
-            }
-            else
-            {
-                AC.IsFind = false;
-            }*/
-
-            // ------------------------------------------------------- //
             DataSet dsAdmin = new DataSet();
             OleDbDataAdapter daAdmin = new OleDbDataAdapter(sSqlOf, AC.con);
-            bool bCheck = false;
 
             if (bCheck == true)
             {
@@ -217,48 +200,52 @@ namespace sport
         }
         private void btnAddEm_Click(object sender, EventArgs e)
         {
-            if (txtNameOf.Text == "")
+            if ((MessageBox.Show("คุณได้ทำการบันทึกข้อมูล แล้วหรือยัง ? \nคุณต้องการเพิ่มใหม่ใช่หรือไม่ ", "(ข้อมูลที่กรอกไปจะถูกเคลียร์)",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes))
             {
-                MessageBox.Show("กรุณากรอกข้อมูลที่จะแก้ไขให้ครบ", "ผิดพลาด",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtNameOf.Focus();
+                txtIDOf.Text = "";
+                txtNameOf.Text = "";
+                txtPasswordOf.Text = "";
+                txtPhoneOf.Text = "";
+                txtSearchOf.Text = "";
+                txtsurNameOf.Text = "";
+                txtUsernameOf.Text = "";
+            }
+            else
+            {
                 return;
-            }
-
-            //OleDbCommand comEdit = new OleDbCommand();
-            try
-            {
-                
-                
-
-                if (MessageBox.Show("คุณต้องการแก้ไขข้อมูลใช่หรือไม่", "ยืนยัน",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    if (AC.currentstatus == "User")
-                    {
-                        EditFunction();
-                    }
-                    else
-                    {
-                        EditFunction();
-                        prvClearAll();
-                        prvShowAllMember();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ข้อมูลผิดพลาด:" + ex.Message, "ผิดพลาด",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
        
+        private void prvCheckRadio()
+        {
+            
+            if (radiomaleOf.Checked == true)
+            {
+                sGender = "ชาย";
+            }
+            else
+            {
+                sGender = "หญิง";
+            }
+           
+
+            if (radioAdmin.Checked == true)
+            {
+                sStatus = "Admin";
+            }
+            else
+            {
+                sStatus = "User";
+            }
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-           
-            
-            
+
+            prvCheckRadio();
+
+            AC.closeConnection();
 
             try
             {
@@ -270,24 +257,22 @@ namespace sport
 
                     AC.openConnection();
 
-                    sqlAddEmp = " INSERT INTO tb_officer(id_officer,of_name,of_surname,of_phone,of_b_date,of_gender,uesrname,password,status) VALUES(@id,@name,@surname,@gender,@bdate,@gender,@username,@password,@status)";
+                    sqlAddEmp = " insert into tb_officer(id_officer,of_name,of_surname,of_phone,of_b_date,of_gender,username,[password],status) values('" +
+                        txtIDOf.Text + "','" +
+                        txtNameOf.Text + "','" +
+                        txtsurNameOf.Text + "','" +
+                        txtPhoneOf.Text + "','" +
+                        BdateTime.Value + "','" +
+                        sGender + "','" +
+                        txtUsernameOf.Text + "','" +
+                        txtPasswordOf.Text + "','" +
+                        sStatus + "')";
 
-                    AC.cmd.Parameters.Clear();
-
-                    AC.cmd.Parameters.AddWithValue("@id", txtIDOf.Text.Trim().ToString());
-                    AC.cmd.Parameters.AddWithValue("@name", txtNameOf.Text.Trim().ToString());
-                    AC.cmd.Parameters.AddWithValue("@lastname", txtsurNameOf.Text.Trim().ToString());
-                    AC.cmd.Parameters.AddWithValue("@phone", txtPhoneOf.Text.Trim().ToString());
-                    AC.cmd.Parameters.AddWithValue("@bdate", BdateTime.Value.GetDateTimeFormats('d')[0]);
-                    AC.cmd.Parameters.AddWithValue("@gender", stateGenter);
-                    AC.cmd.Parameters.AddWithValue("@username", txtUsernameOf.Text.Trim().ToString());
-                    AC.cmd.Parameters.AddWithValue("@password", txtPasswordOf.Text.Trim().ToString());
-                    AC.cmd.Parameters.AddWithValue("@status", stateStatus);
-
-                    AC.cmd.CommandType = CommandType.Text;
-                    AC.cmd.CommandText = sqlAddEmp;
-                    AC.cmd.Connection = AC.con;
-                    AC.cmd.ExecuteNonQuery();
+                    OleDbCommand icmd = new OleDbCommand();
+                    icmd.CommandType = CommandType.Text;
+                    icmd.CommandText = sqlAddEmp;
+                    icmd.Connection = AC.con;
+                    icmd.ExecuteNonQuery();
 
                     // ========================================  Insert Data Into tb_login ==================================== //
            
@@ -295,7 +280,7 @@ namespace sport
 
 
                     prvClearAll();
-                    prvShowAllMember();
+                    prvShowAllOfficer();
 
                 }
             }
@@ -305,6 +290,7 @@ namespace sport
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void prvFormatDataEmployee()
         {
             DataGridViewCellStyle cs = new DataGridViewCellStyle();
@@ -341,14 +327,13 @@ namespace sport
                     return;
                 }
            
-                string stateOfID = "";
-                stateOfID = txtIDOf.Text;
-                String sqlDelOf = "DELETE FROM tb_officer WHERE id_officer='" + stateOfID + "'";
+
+                String sqlDelOf = "DELETE FROM tb_officer WHERE id_officer='" + txtIDOf.Text + "'";
                 
                 AC.openConnection();
 
-                OleDbCommand comDelOf = new OleDbCommand(stateOfID, AC.con);
-                
+                OleDbCommand comDelOf = new OleDbCommand(sqlDelOf, AC.con);
+
 
                 if (MessageBox.Show("คุณต้องการลบข้อมูลนี้ใช่หรือไม่", "ยืนยัน",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
@@ -358,7 +343,7 @@ namespace sport
                     
                     MessageBox.Show("ลบข้อมูลเรียบร้อยแล้ว", "ผลการดำเนินการ");
                     prvClearAll();
-                    prvShowAllMember();
+                    prvShowAllOfficer();
                 }
             }
             catch (Exception ex)
@@ -381,22 +366,33 @@ namespace sport
             //OleDbCommand comEdit = new OleDbCommand();
             try
             {
-                
 
                 if (MessageBox.Show("คุณต้องการแก้ไขข้อมูลใช่หรือไม่", "ยืนยัน",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (AC.currentstatus == "user")
-                    {
-                        EditFunction();
-                    }
-                    else
-                    {
-                        EditFunction();
-                        prvClearAll();
-                        prvShowAllMember();
-                    }
+                    prvCheckRadio();
+                    string sqlEdit;
+                    sqlEdit = "update tb_officer set of_name='" + txtNameOf.Text
+                        + "',of_surname='" + txtsurNameOf.Text
+                        + "',of_phone='" + txtPhoneOf.Text
+                        + "',of_b_date='" + BdateTime.Value
+                        + "',of_gender='" + stateGenter
+                        + "',username='" + txtUsernameOf.Text
+                        + "',[password]='" + txtPasswordOf.Text
+                        + "',status='" + stateStatus
+                        + "' where id_officer='" + txtIDOf.Text + "'";
+
+                    AC.openConnection();
+                    OleDbCommand ecmd = new OleDbCommand();
+
+                    ecmd.CommandType = CommandType.Text;
+                    ecmd.CommandText = sqlEdit;
+                    ecmd.Connection = AC.con;
+                    ecmd.ExecuteNonQuery();
+
                 }
+                prvClearAll();
+                prvShowAllOfficer();
             }
             catch (Exception ex)
             {
@@ -404,50 +400,9 @@ namespace sport
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void EditFunction()
-        {
-            if (radioAdmin.Checked == true)
-            {
-                stateStatus = "Admin";
-            }
-            else
-            {
-                stateStatus = "User";
-            }
-
-
-            string sqlEdit;
-            
-
-             
-            sqlEdit = " UPDATE tb_officer SET of_name='" + txtNameOf.Text
-                + "',of_surname='" + txtsurNameOf.Text
-                + "',of_phone='" + txtPhoneOf.Text
-                + "',of_b_date='" + BdateTime.Value
-                + "',of_gender='" + stateGenter
-                + "',username='" + txtUsernameOf.Text
-                + "',password='" + txtPasswordOf.Text
-                + "',status='" + stateStatus
-                + "'WHERE id_officer= '"+ txtIDOf + "'";
-
-        
-
-            AC.openConnection();
-
-            AC.cmd.CommandType = CommandType.Text;
-            AC.cmd.CommandText = sqlEdit;
-            AC.cmd.Connection = AC.con;
-            AC.cmd.ExecuteNonQuery();
-
    
-
-
-
-
-        }
-        private void ShowAllOf()
+        private void prvShowAllOf()
         {
-
             string SqlApcl = "SELECT * from tb_officer";
             if (AC.IsFind == true)
             {
@@ -466,6 +421,7 @@ namespace sport
                 AC.IsFind = false;
             }
         }
+
         private void btnSearchOf_Click(object sender, EventArgs e)
         {
             string sqlStu = "select * from tb_officer where id_officer = '" + txtSearchOf.Text + "'";
@@ -491,7 +447,7 @@ namespace sport
 
         private void btnSearchAllOf_Click(object sender, EventArgs e)
         {
-            ShowAllOf();
+            prvShowAllOf();
         }
 
        

@@ -60,6 +60,7 @@
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(476, 38);
             this.txtusername.TabIndex = 2;
+            this.txtusername.Text = "smile";
             // 
             // btncancal
             // 
@@ -83,6 +84,7 @@
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(476, 38);
             this.txtpassword.TabIndex = 2;
+            this.txtpassword.Text = "12345";
             // 
             // label1
             // 
@@ -91,7 +93,7 @@
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(475, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 32);
+            this.label1.Size = new System.Drawing.Size(145, 32);
             this.label1.TabIndex = 3;
             this.label1.Text = "Username";
             // 
@@ -102,7 +104,7 @@
             this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(475, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 32);
+            this.label2.Size = new System.Drawing.Size(139, 32);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
@@ -112,7 +114,7 @@
             this.checkpassword.ForeColor = System.Drawing.Color.LightGray;
             this.checkpassword.Location = new System.Drawing.Point(481, 320);
             this.checkpassword.Name = "checkpassword";
-            this.checkpassword.Size = new System.Drawing.Size(124, 20);
+            this.checkpassword.Size = new System.Drawing.Size(128, 21);
             this.checkpassword.TabIndex = 4;
             this.checkpassword.Text = "Show password";
             this.checkpassword.UseVisualStyleBackColor = true;

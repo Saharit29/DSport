@@ -27,3 +27,17 @@ D:\smile\Project\DSport\sport\sport\obj\Debug\sport.csproj.CoreCompileInputs.cac
 D:\smile\Project\DSport\sport\sport\obj\Debug\sport.exe
 D:\smile\Project\DSport\sport\sport\obj\Debug\sport.pdb
 D:\smile\Project\DSport\sport\sport\obj\Debug\sport.FormPrint.resources
+D:\GitHub\DSport\sport\sport\bin\Debug\sport.exe.config
+D:\GitHub\DSport\sport\sport\bin\Debug\sport.exe
+D:\GitHub\DSport\sport\sport\bin\Debug\sport.pdb
+D:\GitHub\DSport\sport\sport\obj\Debug\sport.csproj.AssemblyReference.cache
+D:\GitHub\DSport\sport\sport\obj\Debug\sport.FormLogin.resources
+D:\GitHub\DSport\sport\sport\obj\Debug\sport.FormPrint.resources
+D:\GitHub\DSport\sport\sport\obj\Debug\sport.FormProfile.resources
+D:\GitHub\DSport\sport\sport\obj\Debug\sport.FormApcl.resources
+D:\GitHub\DSport\sport\sport\obj\Debug\sport.Formmain.resources
+D:\GitHub\DSport\sport\sport\obj\Debug\sport.Properties.Resources.resources
+D:\GitHub\DSport\sport\sport\obj\Debug\sport.csproj.GenerateResource.cache
+D:\GitHub\DSport\sport\sport\obj\Debug\sport.csproj.CoreCompileInputs.cache
+D:\GitHub\DSport\sport\sport\obj\Debug\sport.exe
+D:\GitHub\DSport\sport\sport\obj\Debug\sport.pdb

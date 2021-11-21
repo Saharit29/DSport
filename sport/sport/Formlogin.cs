@@ -72,7 +72,7 @@ namespace sport
             {
                 if ((string.IsNullOrEmpty(this.txtusername.Text.Trim())) || (string.IsNullOrEmpty(this.txtpassword.Text.Trim())))
                 {
-                    MessageBox.Show("Please is input your uaername and password.", "Data Entry Erorr : iBasskung Tutorial", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Please is input your uaername and password.", "Data Entry Erorr", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                     if (this.txtusername.CanSelect)
                     {

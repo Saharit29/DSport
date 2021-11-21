@@ -30,7 +30,7 @@ namespace sport.Properties
         public static string getConnectionString()
         {
             // Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\athletes\db_athletes.accdb
-            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=D:/athletes/db_athletes.accdb;";
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=../../../db_athletes.accdb;";
 
             return connectionString;
         }
