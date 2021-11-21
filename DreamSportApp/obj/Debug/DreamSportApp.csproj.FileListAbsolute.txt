@@ -1,0 +1,11 @@
+D:\athletes\DreamSportApp\bin\Debug\DreamSportApp.exe.config
+D:\athletes\DreamSportApp\bin\Debug\DreamSportApp.exe
+D:\athletes\DreamSportApp\bin\Debug\DreamSportApp.pdb
+D:\athletes\DreamSportApp\obj\Debug\DreamSportApp.csproj.AssemblyReference.cache
+D:\athletes\DreamSportApp\obj\Debug\DreamSportApp.csproj.SuggestedBindingRedirects.cache
+D:\athletes\DreamSportApp\obj\Debug\DreamSportApp.Properties.Resources.resources
+D:\athletes\DreamSportApp\obj\Debug\DreamSportApp.csproj.GenerateResource.cache
+D:\athletes\DreamSportApp\obj\Debug\DreamSportApp.csproj.CoreCompileInputs.cache
+D:\athletes\DreamSportApp\obj\Debug\DreamSportApp.exe
+D:\athletes\DreamSportApp\obj\Debug\DreamSportApp.pdb
+D:\athletes\DreamSportApp\obj\Debug\DreamSportApp.Form1.resources
