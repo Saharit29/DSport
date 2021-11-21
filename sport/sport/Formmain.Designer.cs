@@ -60,11 +60,10 @@
             this.panel1.Controls.Add(this.panelMenu);
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Controls.Add(this.panelLogo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(219, 753);
+            this.panel1.Size = new System.Drawing.Size(219, 606);
             this.panel1.TabIndex = 0;
             // 
             // btnLogout
@@ -234,7 +233,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -249,19 +248,20 @@
             this.lbnameStatus.AutoSize = true;
             this.lbnameStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.lbnameStatus.ForeColor = System.Drawing.Color.White;
-            this.lbnameStatus.Location = new System.Drawing.Point(515, 62);
+            this.lbnameStatus.Location = new System.Drawing.Point(643, 119);
             this.lbnameStatus.Name = "lbnameStatus";
-            this.lbnameStatus.Size = new System.Drawing.Size(96, 39);
+            this.lbnameStatus.Size = new System.Drawing.Size(91, 38);
             this.lbnameStatus.TabIndex = 1;
             this.lbnameStatus.Text = "Hello";
+            this.lbnameStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(219, 609);
+            this.panel2.Location = new System.Drawing.Point(0, 619);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(991, 144);
+            this.panel2.Size = new System.Drawing.Size(1210, 134);
             this.panel2.TabIndex = 2;
             // 
             // Formmain
@@ -269,9 +269,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1210, 753);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.lbnameStatus);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Formmain";
             this.Text = "Formmain";

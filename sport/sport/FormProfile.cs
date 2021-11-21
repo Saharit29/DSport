@@ -42,7 +42,7 @@ namespace sport
             else
             {
 
-                lbStatus.Hide();
+                
                 
                 prvShowAllOfficer();
                 prvFormatDataEmployee();
@@ -103,7 +103,7 @@ namespace sport
                     BdateTime.Value = Convert.ToDateTime( dsAdmin.Tables["tb_officer"].Rows[0]["of_b_date"]);
                     txtUsernameOf.Text = dsAdmin.Tables["tb_officer"].Rows[0]["username"].ToString();
                     txtPasswordOf.Text = dsAdmin.Tables["tb_officer"].Rows[0]["password"].ToString();
-                    lbStatus.Text = dsAdmin.Tables["tb_officer"].Rows[0]["status"].ToString();
+                    
                     txtIDOf.Text = dsAdmin.Tables["tb_officer"].Rows[0]["id_officer"].ToString();
 
 

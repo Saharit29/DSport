@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProfile));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radiofemaleOf = new System.Windows.Forms.RadioButton();
@@ -46,7 +47,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lbStatus = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -87,7 +87,6 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.lbStatus);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label6);
@@ -114,7 +113,7 @@
             this.radiofemaleOf.ForeColor = System.Drawing.Color.LightGray;
             this.radiofemaleOf.Location = new System.Drawing.Point(75, 21);
             this.radiofemaleOf.Name = "radiofemaleOf";
-            this.radiofemaleOf.Size = new System.Drawing.Size(51, 20);
+            this.radiofemaleOf.Size = new System.Drawing.Size(54, 21);
             this.radiofemaleOf.TabIndex = 2;
             this.radiofemaleOf.TabStop = true;
             this.radiofemaleOf.Text = "หญิง";
@@ -126,7 +125,7 @@
             this.radiomaleOf.ForeColor = System.Drawing.Color.LightGray;
             this.radiomaleOf.Location = new System.Drawing.Point(6, 21);
             this.radiomaleOf.Name = "radiomaleOf";
-            this.radiomaleOf.Size = new System.Drawing.Size(46, 20);
+            this.radiomaleOf.Size = new System.Drawing.Size(50, 21);
             this.radiomaleOf.TabIndex = 2;
             this.radiomaleOf.TabStop = true;
             this.radiomaleOf.Text = "ชาย";
@@ -148,7 +147,7 @@
             this.radioAdmin.ForeColor = System.Drawing.Color.LightGray;
             this.radioAdmin.Location = new System.Drawing.Point(19, 21);
             this.radioAdmin.Name = "radioAdmin";
-            this.radioAdmin.Size = new System.Drawing.Size(66, 20);
+            this.radioAdmin.Size = new System.Drawing.Size(68, 21);
             this.radioAdmin.TabIndex = 2;
             this.radioAdmin.TabStop = true;
             this.radioAdmin.Text = "Admin";
@@ -160,7 +159,7 @@
             this.radioUser.ForeColor = System.Drawing.Color.LightGray;
             this.radioUser.Location = new System.Drawing.Point(110, 21);
             this.radioUser.Name = "radioUser";
-            this.radioUser.Size = new System.Drawing.Size(57, 20);
+            this.radioUser.Size = new System.Drawing.Size(59, 21);
             this.radioUser.TabIndex = 2;
             this.radioUser.TabStop = true;
             this.radioUser.Text = "User";
@@ -221,7 +220,7 @@
             this.label4.ForeColor = System.Drawing.Color.LightGray;
             this.label4.Location = new System.Drawing.Point(47, 259);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 16);
+            this.label4.Size = new System.Drawing.Size(29, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "เพศ";
             // 
@@ -231,7 +230,7 @@
             this.label9.ForeColor = System.Drawing.Color.LightGray;
             this.label9.Location = new System.Drawing.Point(251, 276);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 16);
+            this.label9.Size = new System.Drawing.Size(48, 17);
             this.label9.TabIndex = 0;
             this.label9.Text = "Status";
             // 
@@ -241,7 +240,7 @@
             this.label5.ForeColor = System.Drawing.Color.LightGray;
             this.label5.Location = new System.Drawing.Point(47, 377);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 16);
+            this.label5.Size = new System.Drawing.Size(92, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "วัน เดือน ปี เกิด";
             // 
@@ -251,19 +250,9 @@
             this.label8.ForeColor = System.Drawing.Color.LightGray;
             this.label8.Location = new System.Drawing.Point(251, 199);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 16);
+            this.label8.Size = new System.Drawing.Size(69, 17);
             this.label8.TabIndex = 0;
             this.label8.Text = "Password";
-            // 
-            // lbStatus
-            // 
-            this.lbStatus.AutoSize = true;
-            this.lbStatus.ForeColor = System.Drawing.Color.LightGray;
-            this.lbStatus.Location = new System.Drawing.Point(431, 49);
-            this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(44, 16);
-            this.lbStatus.TabIndex = 0;
-            this.lbStatus.Text = "Status";
             // 
             // label7
             // 
@@ -271,7 +260,7 @@
             this.label7.ForeColor = System.Drawing.Color.LightGray;
             this.label7.Location = new System.Drawing.Point(251, 125);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 16);
+            this.label7.Size = new System.Drawing.Size(73, 17);
             this.label7.TabIndex = 0;
             this.label7.Text = "Username";
             // 
@@ -281,7 +270,7 @@
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(41, 199);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 16);
+            this.label3.Size = new System.Drawing.Size(53, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "นามสกุล";
             // 
@@ -291,7 +280,7 @@
             this.label6.ForeColor = System.Drawing.Color.LightGray;
             this.label6.Location = new System.Drawing.Point(251, 49);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 16);
+            this.label6.Size = new System.Drawing.Size(64, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "เบอร์มือถือ";
             // 
@@ -301,7 +290,7 @@
             this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(41, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 16);
+            this.label2.Size = new System.Drawing.Size(23, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "ชื่อ";
             // 
@@ -311,7 +300,7 @@
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(41, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "รหัสเจ้าหน้าที่";
             // 
@@ -442,6 +431,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1172, 686);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -494,7 +485,6 @@
         private System.Windows.Forms.DateTimePicker BdateTime;
         private System.Windows.Forms.RadioButton radioUser;
         private System.Windows.Forms.RadioButton radioAdmin;
-        private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;

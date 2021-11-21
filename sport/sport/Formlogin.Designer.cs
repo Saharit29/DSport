@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.btnlogin = new System.Windows.Forms.Button();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.btncancal = new System.Windows.Forms.Button();
@@ -45,7 +46,7 @@
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btnlogin.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnlogin.Location = new System.Drawing.Point(472, 369);
+            this.btnlogin.Location = new System.Drawing.Point(472, 347);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(215, 52);
             this.btnlogin.TabIndex = 1;
@@ -68,7 +69,7 @@
             this.btncancal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncancal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.btncancal.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btncancal.Location = new System.Drawing.Point(733, 369);
+            this.btncancal.Location = new System.Drawing.Point(733, 347);
             this.btncancal.Name = "btncancal";
             this.btncancal.Size = new System.Drawing.Size(215, 52);
             this.btncancal.TabIndex = 1;
@@ -112,7 +113,7 @@
             // 
             this.checkpassword.AutoSize = true;
             this.checkpassword.ForeColor = System.Drawing.Color.LightGray;
-            this.checkpassword.Location = new System.Drawing.Point(481, 320);
+            this.checkpassword.Location = new System.Drawing.Point(481, 310);
             this.checkpassword.Name = "checkpassword";
             this.checkpassword.Size = new System.Drawing.Size(128, 21);
             this.checkpassword.TabIndex = 4;
@@ -123,9 +124,11 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(113, 139);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(84, 109);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 156);
+            this.pictureBox1.Size = new System.Drawing.Size(244, 231);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -134,7 +137,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1001, 503);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1001, 543);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.checkpassword);
             this.Controls.Add(this.label2);
