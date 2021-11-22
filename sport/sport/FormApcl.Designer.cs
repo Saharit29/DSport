@@ -103,17 +103,15 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
             this.cobSporttype = new System.Windows.Forms.ComboBox();
             this.cobSportname = new System.Windows.Forms.ComboBox();
             this.cobIDsport = new System.Windows.Forms.ComboBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.txtMotherMoo = new System.Windows.Forms.TextBox();
-            this.txtMotherHomeNumber = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
             this.txtMotherProvince = new System.Windows.Forms.TextBox();
             this.dtpBirthDateMother = new System.Windows.Forms.DateTimePicker();
+            this.label35 = new System.Windows.Forms.Label();
             this.txtMotherID = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.txtMotherPhone = new System.Windows.Forms.TextBox();
@@ -121,6 +119,7 @@
             this.txtMotherEmail = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.txtMotherNationality = new System.Windows.Forms.TextBox();
             this.txtMotherSurname = new System.Windows.Forms.TextBox();
@@ -133,8 +132,9 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.txtMotherHomeNumber = new System.Windows.Forms.TextBox();
+            this.txtMotherMoo = new System.Windows.Forms.TextBox();
             this.txtMotherDistrict = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.groupAction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TbApcldata)).BeginInit();
             this.groupTbdataApcl.SuspendLayout();
@@ -346,7 +346,7 @@
             // rdbMale
             // 
             this.rdbMale.AutoSize = true;
-            this.rdbMale.Location = new System.Drawing.Point(679, 52);
+            this.rdbMale.Location = new System.Drawing.Point(672, 47);
             this.rdbMale.Name = "rdbMale";
             this.rdbMale.Size = new System.Drawing.Size(50, 21);
             this.rdbMale.TabIndex = 5;
@@ -357,7 +357,7 @@
             // rdbFemale
             // 
             this.rdbFemale.AutoSize = true;
-            this.rdbFemale.Location = new System.Drawing.Point(741, 52);
+            this.rdbFemale.Location = new System.Drawing.Point(734, 47);
             this.rdbFemale.Name = "rdbFemale";
             this.rdbFemale.Size = new System.Drawing.Size(54, 21);
             this.rdbFemale.TabIndex = 5;
@@ -607,7 +607,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(648, 52);
+            this.label4.Location = new System.Drawing.Point(641, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 17);
             this.label4.TabIndex = 0;
@@ -729,6 +729,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "ออกจากหน้านี้";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TbApcldata
             // 
@@ -807,7 +808,10 @@
             // 
             this.panel2.AllowDrop = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.rdbFemale);
             this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.rdbMale);
             this.panel2.Controls.Add(this.txtFatherPhone);
             this.panel2.Controls.Add(this.cobSporttype);
             this.panel2.Controls.Add(this.label21);
@@ -835,7 +839,6 @@
             this.panel2.Controls.Add(this.label45);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label24);
-            this.panel2.Controls.Add(this.rdbMale);
             this.panel2.Controls.Add(this.txtFatherName);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.label46);
@@ -843,9 +846,7 @@
             this.panel2.Controls.Add(this.txtFatherStreet);
             this.panel2.Controls.Add(this.txtAppSubDistrict);
             this.panel2.Controls.Add(this.label47);
-            this.panel2.Controls.Add(this.rdbFemale);
             this.panel2.Controls.Add(this.label44);
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label40);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.txtFatherMoo);
@@ -879,6 +880,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1887, 502);
             this.panel2.TabIndex = 8;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(1368, 24);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(60, 17);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "ข้อมูลบิดา";
             // 
             // cobSporttype
             // 
@@ -917,38 +927,6 @@
             this.cobIDsport.Name = "cobIDsport";
             this.cobIDsport.Size = new System.Drawing.Size(132, 24);
             this.cobIDsport.TabIndex = 9;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(29, 399);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(25, 17);
-            this.label35.TabIndex = 6;
-            this.label35.Text = "หมู่";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(28, 320);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(58, 17);
-            this.label34.TabIndex = 6;
-            this.label34.Text = "บ้านเลขที่";
-            // 
-            // txtMotherMoo
-            // 
-            this.txtMotherMoo.Location = new System.Drawing.Point(28, 418);
-            this.txtMotherMoo.Name = "txtMotherMoo";
-            this.txtMotherMoo.Size = new System.Drawing.Size(130, 22);
-            this.txtMotherMoo.TabIndex = 7;
-            // 
-            // txtMotherHomeNumber
-            // 
-            this.txtMotherHomeNumber.Location = new System.Drawing.Point(28, 354);
-            this.txtMotherHomeNumber.Name = "txtMotherHomeNumber";
-            this.txtMotherHomeNumber.Size = new System.Drawing.Size(130, 22);
-            this.txtMotherHomeNumber.TabIndex = 7;
             // 
             // panel3
             // 
@@ -1009,6 +987,15 @@
             this.dtpBirthDateMother.Size = new System.Drawing.Size(169, 22);
             this.dtpBirthDateMother.TabIndex = 3;
             // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(29, 399);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(25, 17);
+            this.label35.TabIndex = 6;
+            this.label35.Text = "หมู่";
+            // 
             // txtMotherID
             // 
             this.txtMotherID.Location = new System.Drawing.Point(28, 154);
@@ -1063,6 +1050,15 @@
             this.label25.Size = new System.Drawing.Size(53, 17);
             this.label25.TabIndex = 0;
             this.label25.Text = "นามสกุล";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(28, 320);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(58, 17);
+            this.label34.TabIndex = 6;
+            this.label34.Text = "บ้านเลขที่";
             // 
             // label37
             // 
@@ -1164,21 +1160,26 @@
             this.label29.TabIndex = 0;
             this.label29.Text = "Email";
             // 
+            // txtMotherHomeNumber
+            // 
+            this.txtMotherHomeNumber.Location = new System.Drawing.Point(28, 354);
+            this.txtMotherHomeNumber.Name = "txtMotherHomeNumber";
+            this.txtMotherHomeNumber.Size = new System.Drawing.Size(130, 22);
+            this.txtMotherHomeNumber.TabIndex = 7;
+            // 
+            // txtMotherMoo
+            // 
+            this.txtMotherMoo.Location = new System.Drawing.Point(28, 418);
+            this.txtMotherMoo.Name = "txtMotherMoo";
+            this.txtMotherMoo.Size = new System.Drawing.Size(130, 22);
+            this.txtMotherMoo.TabIndex = 7;
+            // 
             // txtMotherDistrict
             // 
             this.txtMotherDistrict.Location = new System.Drawing.Point(195, 354);
             this.txtMotherDistrict.Name = "txtMotherDistrict";
             this.txtMotherDistrict.Size = new System.Drawing.Size(130, 22);
             this.txtMotherDistrict.TabIndex = 7;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(1368, 24);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 17);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "ข้อมูลบิดา";
             // 
             // FormApcl
             // 

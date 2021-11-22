@@ -158,7 +158,7 @@ namespace sport
                     radioAdmin.Checked = true;
                 }
 
-                //dtpBirthDate.CustomFormat = "dd.MMM-yyyy";
+                
 
 
 
