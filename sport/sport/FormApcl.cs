@@ -248,7 +248,7 @@ namespace sport
                 txtAppSubDistrict.Text = "";
                 Apclb_date.Value = DateTime.Now;
                 Apcldate.Value = DateTime.Now;
-                Apclimg.Image = null;
+  
                 txtAppID.Focus();
 
                 txtMotherID.Text = "";

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSelect = new System.Windows.Forms.Button();
             this.txtFatherProvince = new System.Windows.Forms.TextBox();
             this.txtAppProvince = new System.Windows.Forms.TextBox();
             this.txtFatherSubDistrict = new System.Windows.Forms.TextBox();
@@ -73,7 +72,6 @@
             this.txtAppSurname = new System.Windows.Forms.TextBox();
             this.txtAppName = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.Apclimg = new System.Windows.Forms.PictureBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -100,10 +98,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.TbApcldata = new System.Windows.Forms.DataGridView();
             this.groupTbdataApcl = new System.Windows.Forms.GroupBox();
+            this.label49 = new System.Windows.Forms.Label();
             this.btnsearchAll = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cobSporttype = new System.Windows.Forms.ComboBox();
+            this.cobSportname = new System.Windows.Forms.ComboBox();
             this.cobIDsport = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -133,36 +134,17 @@
             this.label39 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.txtMotherDistrict = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.cobSportname = new System.Windows.Forms.ComboBox();
-            this.cobSporttype = new System.Windows.Forms.ComboBox();
-            this.label49 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Apclimg)).BeginInit();
             this.groupAction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TbApcldata)).BeginInit();
             this.groupTbdataApcl.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.btnSelect.Location = new System.Drawing.Point(23, 179);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(105, 29);
-            this.btnSelect.TabIndex = 8;
-            this.btnSelect.Text = "เลือก";
-            this.btnSelect.UseVisualStyleBackColor = false;
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // txtFatherProvince
             // 
-            this.txtFatherProvince.Location = new System.Drawing.Point(371, 428);
+            this.txtFatherProvince.Location = new System.Drawing.Point(1721, 418);
             this.txtFatherProvince.Name = "txtFatherProvince";
             this.txtFatherProvince.Size = new System.Drawing.Size(130, 22);
             this.txtFatherProvince.TabIndex = 7;
@@ -176,7 +158,7 @@
             // 
             // txtFatherSubDistrict
             // 
-            this.txtFatherSubDistrict.Location = new System.Drawing.Point(371, 358);
+            this.txtFatherSubDistrict.Location = new System.Drawing.Point(1721, 348);
             this.txtFatherSubDistrict.Name = "txtFatherSubDistrict";
             this.txtFatherSubDistrict.Size = new System.Drawing.Size(130, 22);
             this.txtFatherSubDistrict.TabIndex = 7;
@@ -190,14 +172,14 @@
             // 
             // txtFatherStreet
             // 
-            this.txtFatherStreet.Location = new System.Drawing.Point(194, 428);
+            this.txtFatherStreet.Location = new System.Drawing.Point(1544, 418);
             this.txtFatherStreet.Name = "txtFatherStreet";
             this.txtFatherStreet.Size = new System.Drawing.Size(130, 22);
             this.txtFatherStreet.TabIndex = 7;
             // 
             // txtFatherDistrict
             // 
-            this.txtFatherDistrict.Location = new System.Drawing.Point(194, 358);
+            this.txtFatherDistrict.Location = new System.Drawing.Point(1544, 348);
             this.txtFatherDistrict.Name = "txtFatherDistrict";
             this.txtFatherDistrict.Size = new System.Drawing.Size(130, 22);
             this.txtFatherDistrict.TabIndex = 7;
@@ -211,7 +193,7 @@
             // 
             // txtFatherMoo
             // 
-            this.txtFatherMoo.Location = new System.Drawing.Point(19, 428);
+            this.txtFatherMoo.Location = new System.Drawing.Point(1369, 418);
             this.txtFatherMoo.Name = "txtFatherMoo";
             this.txtFatherMoo.Size = new System.Drawing.Size(130, 22);
             this.txtFatherMoo.TabIndex = 7;
@@ -225,7 +207,7 @@
             // 
             // txtFatherHomeNumber
             // 
-            this.txtFatherHomeNumber.Location = new System.Drawing.Point(19, 362);
+            this.txtFatherHomeNumber.Location = new System.Drawing.Point(1369, 352);
             this.txtFatherHomeNumber.Name = "txtFatherHomeNumber";
             this.txtFatherHomeNumber.Size = new System.Drawing.Size(130, 22);
             this.txtFatherHomeNumber.TabIndex = 7;
@@ -233,7 +215,7 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(368, 409);
+            this.label45.Location = new System.Drawing.Point(1718, 399);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(47, 17);
             this.label45.TabIndex = 6;
@@ -249,7 +231,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(368, 330);
+            this.label44.Location = new System.Drawing.Point(1718, 320);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(37, 17);
             this.label44.TabIndex = 6;
@@ -265,7 +247,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(191, 409);
+            this.label43.Location = new System.Drawing.Point(1541, 399);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(34, 17);
             this.label43.TabIndex = 6;
@@ -283,7 +265,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(191, 330);
+            this.label42.Location = new System.Drawing.Point(1541, 320);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(40, 17);
             this.label42.TabIndex = 6;
@@ -301,7 +283,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(16, 409);
+            this.label41.Location = new System.Drawing.Point(1366, 399);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(25, 17);
             this.label41.TabIndex = 6;
@@ -337,7 +319,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(16, 330);
+            this.label40.Location = new System.Drawing.Point(1366, 320);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(58, 17);
             this.label40.TabIndex = 6;
@@ -400,7 +382,7 @@
             // 
             // dtpBirthDateFather
             // 
-            this.dtpBirthDateFather.Location = new System.Drawing.Point(19, 104);
+            this.dtpBirthDateFather.Location = new System.Drawing.Point(1369, 94);
             this.dtpBirthDateFather.Name = "dtpBirthDateFather";
             this.dtpBirthDateFather.Size = new System.Drawing.Size(156, 22);
             this.dtpBirthDateFather.TabIndex = 3;
@@ -414,14 +396,14 @@
             // 
             // txtFatherID
             // 
-            this.txtFatherID.Location = new System.Drawing.Point(19, 164);
+            this.txtFatherID.Location = new System.Drawing.Point(1369, 154);
             this.txtFatherID.Name = "txtFatherID";
             this.txtFatherID.Size = new System.Drawing.Size(156, 22);
             this.txtFatherID.TabIndex = 2;
             // 
             // txtFatherPhone
             // 
-            this.txtFatherPhone.Location = new System.Drawing.Point(265, 226);
+            this.txtFatherPhone.Location = new System.Drawing.Point(1615, 216);
             this.txtFatherPhone.Name = "txtFatherPhone";
             this.txtFatherPhone.Size = new System.Drawing.Size(156, 22);
             this.txtFatherPhone.TabIndex = 2;
@@ -442,7 +424,7 @@
             // 
             // txtFatherEmail
             // 
-            this.txtFatherEmail.Location = new System.Drawing.Point(265, 164);
+            this.txtFatherEmail.Location = new System.Drawing.Point(1615, 154);
             this.txtFatherEmail.Name = "txtFatherEmail";
             this.txtFatherEmail.Size = new System.Drawing.Size(156, 22);
             this.txtFatherEmail.TabIndex = 2;
@@ -456,7 +438,7 @@
             // 
             // txtFatherNationality
             // 
-            this.txtFatherNationality.Location = new System.Drawing.Point(265, 106);
+            this.txtFatherNationality.Location = new System.Drawing.Point(1615, 96);
             this.txtFatherNationality.Name = "txtFatherNationality";
             this.txtFatherNationality.Size = new System.Drawing.Size(156, 22);
             this.txtFatherNationality.TabIndex = 2;
@@ -470,14 +452,14 @@
             // 
             // txtFatherSurname
             // 
-            this.txtFatherSurname.Location = new System.Drawing.Point(19, 290);
+            this.txtFatherSurname.Location = new System.Drawing.Point(1369, 280);
             this.txtFatherSurname.Name = "txtFatherSurname";
             this.txtFatherSurname.Size = new System.Drawing.Size(156, 22);
             this.txtFatherSurname.TabIndex = 2;
             // 
             // txtFatherName
             // 
-            this.txtFatherName.Location = new System.Drawing.Point(19, 226);
+            this.txtFatherName.Location = new System.Drawing.Point(1369, 216);
             this.txtFatherName.Name = "txtFatherName";
             this.txtFatherName.Size = new System.Drawing.Size(156, 22);
             this.txtFatherName.TabIndex = 2;
@@ -499,26 +481,16 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(263, 202);
+            this.label24.Location = new System.Drawing.Point(1613, 192);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(64, 17);
             this.label24.TabIndex = 0;
             this.label24.Text = "เบอร์มือถือ";
             // 
-            // Apclimg
-            // 
-            this.Apclimg.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Apclimg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Apclimg.Location = new System.Drawing.Point(23, 42);
-            this.Apclimg.Name = "Apclimg";
-            this.Apclimg.Size = new System.Drawing.Size(105, 118);
-            this.Apclimg.TabIndex = 1;
-            this.Apclimg.TabStop = false;
-            // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(18, 140);
+            this.label48.Location = new System.Drawing.Point(1368, 130);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(128, 17);
             this.label48.TabIndex = 0;
@@ -527,7 +499,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(263, 140);
+            this.label23.Location = new System.Drawing.Point(1613, 130);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(42, 17);
             this.label23.TabIndex = 0;
@@ -563,7 +535,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(262, 78);
+            this.label22.Location = new System.Drawing.Point(1612, 68);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(47, 17);
             this.label22.TabIndex = 0;
@@ -581,7 +553,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(16, 78);
+            this.label21.Location = new System.Drawing.Point(1366, 68);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(80, 17);
             this.label21.TabIndex = 0;
@@ -590,7 +562,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(16, 264);
+            this.label47.Location = new System.Drawing.Point(1366, 254);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(53, 17);
             this.label47.TabIndex = 0;
@@ -617,7 +589,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(18, 202);
+            this.label46.Location = new System.Drawing.Point(1368, 192);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(23, 17);
             this.label46.TabIndex = 0;
@@ -740,9 +712,9 @@
             this.groupAction.Controls.Add(this.btnAdd);
             this.groupAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupAction.ForeColor = System.Drawing.Color.LightGray;
-            this.groupAction.Location = new System.Drawing.Point(1376, 532);
+            this.groupAction.Location = new System.Drawing.Point(1350, 532);
             this.groupAction.Name = "groupAction";
-            this.groupAction.Size = new System.Drawing.Size(548, 498);
+            this.groupAction.Size = new System.Drawing.Size(548, 475);
             this.groupAction.TabIndex = 1;
             this.groupAction.TabStop = false;
             // 
@@ -782,9 +754,20 @@
             this.groupTbdataApcl.ForeColor = System.Drawing.Color.Black;
             this.groupTbdataApcl.Location = new System.Drawing.Point(25, 532);
             this.groupTbdataApcl.Name = "groupTbdataApcl";
-            this.groupTbdataApcl.Size = new System.Drawing.Size(1345, 510);
+            this.groupTbdataApcl.Size = new System.Drawing.Size(1319, 475);
             this.groupTbdataApcl.TabIndex = 3;
             this.groupTbdataApcl.TabStop = false;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label49.ForeColor = System.Drawing.Color.LightGray;
+            this.label49.Location = new System.Drawing.Point(110, 43);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(219, 32);
+            this.label49.TabIndex = 4;
+            this.label49.Text = "ตารางข้อมูลผู้สมัคร";
             // 
             // btnsearchAll
             // 
@@ -822,33 +805,60 @@
             // 
             // panel2
             // 
+            this.panel2.AllowDrop = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.txtFatherPhone);
             this.panel2.Controls.Add(this.cobSporttype);
+            this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.cobSportname);
+            this.panel2.Controls.Add(this.txtFatherProvince);
             this.panel2.Controls.Add(this.cobIDsport);
-            this.panel2.Controls.Add(this.btnSelect);
-            this.panel2.Controls.Add(this.Apclimg);
+            this.panel2.Controls.Add(this.label48);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.txtFatherEmail);
             this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.txtFatherNationality);
             this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtFatherSubDistrict);
             this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.txtFatherID);
             this.panel2.Controls.Add(this.txtAppProvince);
+            this.panel2.Controls.Add(this.dtpBirthDateFather);
             this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.txtFatherSurname);
             this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label45);
             this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.rdbMale);
+            this.panel2.Controls.Add(this.txtFatherName);
             this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.label46);
             this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.txtFatherStreet);
             this.panel2.Controls.Add(this.txtAppSubDistrict);
+            this.panel2.Controls.Add(this.label47);
             this.panel2.Controls.Add(this.rdbFemale);
+            this.panel2.Controls.Add(this.label44);
             this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label40);
             this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.txtFatherMoo);
             this.panel2.Controls.Add(this.label19);
+            this.panel2.Controls.Add(this.txtFatherHomeNumber);
             this.panel2.Controls.Add(this.Apcldate);
+            this.panel2.Controls.Add(this.label43);
             this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label41);
             this.panel2.Controls.Add(this.label16);
+            this.panel2.Controls.Add(this.label42);
             this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.txtFatherDistrict);
             this.panel2.Controls.Add(this.Apclb_date);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.txtAppStreet);
@@ -867,8 +877,33 @@
             this.panel2.ForeColor = System.Drawing.Color.LightGray;
             this.panel2.Location = new System.Drawing.Point(25, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(833, 514);
+            this.panel2.Size = new System.Drawing.Size(1887, 502);
             this.panel2.TabIndex = 8;
+            // 
+            // cobSporttype
+            // 
+            this.cobSporttype.FormattingEnabled = true;
+            this.cobSporttype.Items.AddRange(new object[] {
+            "ศิลปะการต่อสู้",
+            "ทีม",
+            "ลู่ลาน"});
+            this.cobSporttype.Location = new System.Drawing.Point(153, 231);
+            this.cobSporttype.Name = "cobSporttype";
+            this.cobSporttype.Size = new System.Drawing.Size(132, 24);
+            this.cobSporttype.TabIndex = 9;
+            // 
+            // cobSportname
+            // 
+            this.cobSportname.FormattingEnabled = true;
+            this.cobSportname.Items.AddRange(new object[] {
+            "เทควันโด",
+            "บาสเกตบอล",
+            "กรีฑา",
+            "ยิงธนู"});
+            this.cobSportname.Location = new System.Drawing.Point(153, 170);
+            this.cobSportname.Name = "cobSportname";
+            this.cobSportname.Size = new System.Drawing.Size(132, 24);
+            this.cobSportname.TabIndex = 9;
             // 
             // cobIDsport
             // 
@@ -946,9 +981,9 @@
             this.panel3.Controls.Add(this.txtMotherMoo);
             this.panel3.Controls.Add(this.txtMotherDistrict);
             this.panel3.ForeColor = System.Drawing.Color.LightGray;
-            this.panel3.Location = new System.Drawing.Point(864, 12);
+            this.panel3.Location = new System.Drawing.Point(813, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(506, 514);
+            this.panel3.Size = new System.Drawing.Size(506, 502);
             this.panel3.TabIndex = 8;
             // 
             // label30
@@ -1136,88 +1171,14 @@
             this.txtMotherDistrict.Size = new System.Drawing.Size(130, 22);
             this.txtMotherDistrict.TabIndex = 7;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.txtFatherPhone);
-            this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.txtFatherProvince);
-            this.groupBox1.Controls.Add(this.label48);
-            this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Controls.Add(this.txtFatherEmail);
-            this.groupBox1.Controls.Add(this.txtFatherNationality);
-            this.groupBox1.Controls.Add(this.txtFatherSubDistrict);
-            this.groupBox1.Controls.Add(this.txtFatherID);
-            this.groupBox1.Controls.Add(this.dtpBirthDateFather);
-            this.groupBox1.Controls.Add(this.label23);
-            this.groupBox1.Controls.Add(this.txtFatherSurname);
-            this.groupBox1.Controls.Add(this.label45);
-            this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Controls.Add(this.txtFatherName);
-            this.groupBox1.Controls.Add(this.label46);
-            this.groupBox1.Controls.Add(this.txtFatherStreet);
-            this.groupBox1.Controls.Add(this.label47);
-            this.groupBox1.Controls.Add(this.label44);
-            this.groupBox1.Controls.Add(this.label40);
-            this.groupBox1.Controls.Add(this.txtFatherMoo);
-            this.groupBox1.Controls.Add(this.txtFatherHomeNumber);
-            this.groupBox1.Controls.Add(this.label43);
-            this.groupBox1.Controls.Add(this.label41);
-            this.groupBox1.Controls.Add(this.label42);
-            this.groupBox1.Controls.Add(this.txtFatherDistrict);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.ForeColor = System.Drawing.Color.LightGray;
-            this.groupBox1.Location = new System.Drawing.Point(1376, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(560, 524);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(18, 34);
+            this.label17.Location = new System.Drawing.Point(1368, 24);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(60, 17);
             this.label17.TabIndex = 8;
             this.label17.Text = "ข้อมูลบิดา";
-            // 
-            // cobSportname
-            // 
-            this.cobSportname.FormattingEnabled = true;
-            this.cobSportname.Items.AddRange(new object[] {
-            "เทควันโด",
-            "บาสเกตบอล",
-            "กรีฑา",
-            "ยิงธนู"});
-            this.cobSportname.Location = new System.Drawing.Point(153, 170);
-            this.cobSportname.Name = "cobSportname";
-            this.cobSportname.Size = new System.Drawing.Size(132, 24);
-            this.cobSportname.TabIndex = 9;
-            // 
-            // cobSporttype
-            // 
-            this.cobSporttype.FormattingEnabled = true;
-            this.cobSporttype.Items.AddRange(new object[] {
-            "ศิลปะการต่อสู้",
-            "ทีม",
-            "ลู่ลาน"});
-            this.cobSporttype.Location = new System.Drawing.Point(153, 231);
-            this.cobSporttype.Name = "cobSporttype";
-            this.cobSporttype.Size = new System.Drawing.Size(132, 24);
-            this.cobSporttype.TabIndex = 9;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label49.ForeColor = System.Drawing.Color.LightGray;
-            this.label49.Location = new System.Drawing.Point(110, 43);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(219, 32);
-            this.label49.TabIndex = 4;
-            this.label49.Text = "ตารางข้อมูลผู้สมัคร";
             // 
             // FormApcl
             // 
@@ -1227,15 +1188,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.groupAction);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupTbdataApcl);
             this.Name = "FormApcl";
             this.Text = "SportApplicant";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormApcl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Apclimg)).EndInit();
             this.groupAction.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TbApcldata)).EndInit();
             this.groupTbdataApcl.ResumeLayout(false);
@@ -1244,8 +1202,6 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1255,7 +1211,6 @@
         private System.Windows.Forms.DateTimePicker Apclb_date;
         private System.Windows.Forms.TextBox txtAppSurname;
         private System.Windows.Forms.TextBox txtAppName;
-        private System.Windows.Forms.PictureBox Apclimg;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -1283,7 +1238,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.DateTimePicker dtpBirthDateFather;
         private System.Windows.Forms.TextBox txtFatherPhone;
         private System.Windows.Forms.TextBox txtFatherEmail;
@@ -1355,7 +1309,6 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cobIDsport;
