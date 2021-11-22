@@ -424,18 +424,26 @@ namespace sport
 
         private void btnSearchOf_Click(object sender, EventArgs e)
         {
-            string sqlStu = "select * from tb_officer where id_officer = '" + txtSearchOf.Text + "'";
+            DataSet dsOfficer = new DataSet();
+            string sqlOfficer = "select * from tb_officer where id_officer = '" + txtSearchOf.Text + "'";
+            
+                dsOfficer.Tables["tb_officer"].Clear();
+
+            if (txtSearchOf.Text != "")
             {
-                AC.ds.Tables["tb_officer"].Clear();
+                if (bCheck == true)
+                {
+                    dsOfficer.Tables["tb_officer"].Clear();
+                }
+                AC.da = new OleDbDataAdapter(sqlOfficer, AC.con);
+                AC.da.Fill(dsOfficer, "tb_officer");
             }
-            AC.da = new OleDbDataAdapter(sqlStu, AC.con);
-            AC.da.Fill(AC.ds, "tb_officer");
-            if (AC.ds.Tables["tb_officer"].Rows.Count != 0)
+            if (dsOfficer.Tables["tb_officer"].Rows.Count != 0)
             {
                 AC.IsFind = true;
                 tbDateOf.ReadOnly = true;
-                tbDateOf.DataSource = AC.ds.Tables["tb_officer"];
-                txtSearchOf.Text = " ";
+                tbDateOf.DataSource = dsOfficer.Tables["tb_officer"];
+                
             }
             else
             {

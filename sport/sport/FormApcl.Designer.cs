@@ -61,7 +61,6 @@
             this.dtpBirthDateFather = new System.Windows.Forms.DateTimePicker();
             this.Apclb_date = new System.Windows.Forms.DateTimePicker();
             this.txtFatherID = new System.Windows.Forms.TextBox();
-            this.txtsporttype = new System.Windows.Forms.TextBox();
             this.txtFatherPhone = new System.Windows.Forms.TextBox();
             this.txtAppID = new System.Windows.Forms.TextBox();
             this.txtAppPhone = new System.Windows.Forms.TextBox();
@@ -71,8 +70,6 @@
             this.txtAppNationality = new System.Windows.Forms.TextBox();
             this.txtFatherSurname = new System.Windows.Forms.TextBox();
             this.txtFatherName = new System.Windows.Forms.TextBox();
-            this.txtsportname = new System.Windows.Forms.TextBox();
-            this.txtidsport = new System.Windows.Forms.TextBox();
             this.txtAppSurname = new System.Windows.Forms.TextBox();
             this.txtAppName = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -107,6 +104,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cobIDsport = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.txtMotherMoo = new System.Windows.Forms.TextBox();
@@ -137,6 +135,9 @@
             this.txtMotherDistrict = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.cobSportname = new System.Windows.Forms.ComboBox();
+            this.cobSporttype = new System.Windows.Forms.ComboBox();
+            this.label49 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Apclimg)).BeginInit();
             this.groupAction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TbApcldata)).BeginInit();
@@ -418,13 +419,6 @@
             this.txtFatherID.Size = new System.Drawing.Size(156, 22);
             this.txtFatherID.TabIndex = 2;
             // 
-            // txtsporttype
-            // 
-            this.txtsporttype.Location = new System.Drawing.Point(153, 234);
-            this.txtsporttype.Name = "txtsporttype";
-            this.txtsporttype.Size = new System.Drawing.Size(132, 22);
-            this.txtsporttype.TabIndex = 2;
-            // 
             // txtFatherPhone
             // 
             this.txtFatherPhone.Location = new System.Drawing.Point(265, 226);
@@ -487,20 +481,6 @@
             this.txtFatherName.Name = "txtFatherName";
             this.txtFatherName.Size = new System.Drawing.Size(156, 22);
             this.txtFatherName.TabIndex = 2;
-            // 
-            // txtsportname
-            // 
-            this.txtsportname.Location = new System.Drawing.Point(150, 173);
-            this.txtsportname.Name = "txtsportname";
-            this.txtsportname.Size = new System.Drawing.Size(135, 22);
-            this.txtsportname.TabIndex = 2;
-            // 
-            // txtidsport
-            // 
-            this.txtidsport.Location = new System.Drawing.Point(150, 110);
-            this.txtidsport.Name = "txtidsport";
-            this.txtidsport.Size = new System.Drawing.Size(135, 22);
-            this.txtidsport.TabIndex = 2;
             // 
             // txtAppSurname
             // 
@@ -780,7 +760,9 @@
             // 
             // TbApcldata
             // 
+            this.TbApcldata.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.TbApcldata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TbApcldata.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TbApcldata.Location = new System.Drawing.Point(34, 114);
             this.TbApcldata.Name = "TbApcldata";
             this.TbApcldata.RowHeadersWidth = 51;
@@ -792,22 +774,23 @@
             // groupTbdataApcl
             // 
             this.groupTbdataApcl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.groupTbdataApcl.Controls.Add(this.label49);
             this.groupTbdataApcl.Controls.Add(this.btnsearchAll);
             this.groupTbdataApcl.Controls.Add(this.btnSearch);
             this.groupTbdataApcl.Controls.Add(this.TbApcldata);
             this.groupTbdataApcl.Controls.Add(this.txtSearch);
-            this.groupTbdataApcl.ForeColor = System.Drawing.Color.LightGray;
+            this.groupTbdataApcl.ForeColor = System.Drawing.Color.Black;
             this.groupTbdataApcl.Location = new System.Drawing.Point(25, 532);
             this.groupTbdataApcl.Name = "groupTbdataApcl";
             this.groupTbdataApcl.Size = new System.Drawing.Size(1345, 510);
             this.groupTbdataApcl.TabIndex = 3;
             this.groupTbdataApcl.TabStop = false;
-            this.groupTbdataApcl.Text = "ตารางข้อมูลนักีฬา";
             // 
             // btnsearchAll
             // 
             this.btnsearchAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.btnsearchAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsearchAll.ForeColor = System.Drawing.Color.LightGray;
             this.btnsearchAll.Location = new System.Drawing.Point(1156, 37);
             this.btnsearchAll.Name = "btnsearchAll";
             this.btnsearchAll.Size = new System.Drawing.Size(128, 49);
@@ -820,6 +803,7 @@
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.ForeColor = System.Drawing.Color.LightGray;
             this.btnSearch.Location = new System.Drawing.Point(981, 37);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(140, 49);
@@ -839,6 +823,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panel2.Controls.Add(this.cobSporttype);
+            this.panel2.Controls.Add(this.cobSportname);
+            this.panel2.Controls.Add(this.cobIDsport);
             this.panel2.Controls.Add(this.btnSelect);
             this.panel2.Controls.Add(this.Apclimg);
             this.panel2.Controls.Add(this.label13);
@@ -864,7 +851,6 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.Apclb_date);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.txtsporttype);
             this.panel2.Controls.Add(this.txtAppStreet);
             this.panel2.Controls.Add(this.txtAppID);
             this.panel2.Controls.Add(this.label8);
@@ -878,13 +864,24 @@
             this.panel2.Controls.Add(this.txtAppName);
             this.panel2.Controls.Add(this.txtAppMoo);
             this.panel2.Controls.Add(this.txtAppSurname);
-            this.panel2.Controls.Add(this.txtsportname);
-            this.panel2.Controls.Add(this.txtidsport);
             this.panel2.ForeColor = System.Drawing.Color.LightGray;
             this.panel2.Location = new System.Drawing.Point(25, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(833, 514);
             this.panel2.TabIndex = 8;
+            // 
+            // cobIDsport
+            // 
+            this.cobIDsport.FormattingEnabled = true;
+            this.cobIDsport.Items.AddRange(new object[] {
+            "MAS02",
+            "TES03",
+            "TKS01",
+            "TKS02"});
+            this.cobIDsport.Location = new System.Drawing.Point(153, 112);
+            this.cobIDsport.Name = "cobIDsport";
+            this.cobIDsport.Size = new System.Drawing.Size(132, 24);
+            this.cobIDsport.TabIndex = 9;
             // 
             // label35
             // 
@@ -1186,6 +1183,42 @@
             this.label17.TabIndex = 8;
             this.label17.Text = "ข้อมูลบิดา";
             // 
+            // cobSportname
+            // 
+            this.cobSportname.FormattingEnabled = true;
+            this.cobSportname.Items.AddRange(new object[] {
+            "เทควันโด",
+            "บาสเกตบอล",
+            "กรีฑา",
+            "ยิงธนู"});
+            this.cobSportname.Location = new System.Drawing.Point(153, 170);
+            this.cobSportname.Name = "cobSportname";
+            this.cobSportname.Size = new System.Drawing.Size(132, 24);
+            this.cobSportname.TabIndex = 9;
+            // 
+            // cobSporttype
+            // 
+            this.cobSporttype.FormattingEnabled = true;
+            this.cobSporttype.Items.AddRange(new object[] {
+            "ศิลปะการต่อสู้",
+            "ทีม",
+            "ลู่ลาน"});
+            this.cobSporttype.Location = new System.Drawing.Point(153, 231);
+            this.cobSporttype.Name = "cobSporttype";
+            this.cobSporttype.Size = new System.Drawing.Size(132, 24);
+            this.cobSporttype.TabIndex = 9;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label49.ForeColor = System.Drawing.Color.LightGray;
+            this.label49.Location = new System.Drawing.Point(110, 43);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(219, 32);
+            this.label49.TabIndex = 4;
+            this.label49.Text = "ตารางข้อมูลผู้สมัคร";
+            // 
             // FormApcl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1255,8 +1288,6 @@
         private System.Windows.Forms.TextBox txtFatherPhone;
         private System.Windows.Forms.TextBox txtFatherEmail;
         private System.Windows.Forms.TextBox txtFatherNationality;
-        private System.Windows.Forms.TextBox txtsportname;
-        private System.Windows.Forms.TextBox txtidsport;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
@@ -1268,7 +1299,6 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox groupAction;
-        private System.Windows.Forms.TextBox txtsporttype;
         private System.Windows.Forms.TextBox txtAppID;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
@@ -1328,5 +1358,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cobIDsport;
+        private System.Windows.Forms.ComboBox cobSporttype;
+        private System.Windows.Forms.ComboBox cobSportname;
+        private System.Windows.Forms.Label label49;
     }
 }

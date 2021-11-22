@@ -38,6 +38,7 @@ namespace sport
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearchFlterApp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllApp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,12 +124,27 @@ namespace sport
             // 
             // txtSearch
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(183, 76);
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.LightGray;
+            this.txtSearch.Location = new System.Drawing.Point(183, 68);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(1035, 30);
+            this.txtSearch.Size = new System.Drawing.Size(950, 38);
             this.txtSearch.TabIndex = 4;
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
+            // 
+            // btnSearchFlterApp
+            // 
+            this.btnSearchFlterApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
+            this.btnSearchFlterApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.btnSearchFlterApp.ForeColor = System.Drawing.Color.LightGray;
+            this.btnSearchFlterApp.Location = new System.Drawing.Point(1143, 68);
+            this.btnSearchFlterApp.Name = "btnSearchFlterApp";
+            this.btnSearchFlterApp.Size = new System.Drawing.Size(75, 37);
+            this.btnSearchFlterApp.TabIndex = 5;
+            this.btnSearchFlterApp.Text = "ค้นหา";
+            this.btnSearchFlterApp.UseVisualStyleBackColor = false;
+            this.btnSearchFlterApp.Click += new System.EventHandler(this.btnSearchFlterApp_Click);
             // 
             // FormFilterApp
             // 
@@ -137,6 +153,7 @@ namespace sport
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(45)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1606, 686);
+            this.Controls.Add(this.btnSearchFlterApp);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnLoad);
@@ -165,5 +182,6 @@ namespace sport
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearchFlterApp;
     }
 }

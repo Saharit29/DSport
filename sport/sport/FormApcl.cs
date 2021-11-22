@@ -24,7 +24,8 @@ namespace sport
         DataSet dsFather = new DataSet();
         DataSet dsMother = new DataSet();
         string sSport, sMother, sFather, sOfficer;
-        string stateGenter = "";
+        string stateGen = "";
+        
 
         AC ocn = new AC();
         private void ShowAllApcl()
@@ -106,7 +107,8 @@ namespace sport
             
 
         }
-
+        
+            
      
         private void TbApcldata_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -116,9 +118,20 @@ namespace sport
             }
             try
             {
+                
                 txtAppID.Text = TbApcldata.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtAppName.Text = TbApcldata.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtAppSurname.Text = TbApcldata.Rows[e.RowIndex].Cells[2].Value.ToString();
+                stateGen = TbApcldata.Rows[e.RowIndex].Cells[3].Value.ToString();
+                if (rdbMale.Checked == true)
+                {
+                    stateGen = "ชาย";
+                }
+                else
+                {
+                    stateGen = "หญิง";
+                }
+
                 txtAppNationality.Text = TbApcldata.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtAppEmail.Text = TbApcldata.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtAppPhone.Text = TbApcldata.Rows[e.RowIndex].Cells[6].Value.ToString();
@@ -147,9 +160,11 @@ namespace sport
 
                     if (sport.Tables["tb_sport"].Rows.Count != 0)
                     {
-                        txtidsport.Text = sSport;
-                        txtsportname.Text = sport.Tables["tb_sport"].Rows[0]["sp_name"].ToString();
-                        txtsporttype.Text = sport.Tables["tb_sport"].Rows[0]["sp_type"].ToString();
+                        cobIDsport.Text = sSport;
+                        cobSportname.Text = sport.Tables["tb_sport"].Rows[0]["sp_name"].ToString(); 
+                        cobSporttype.Text = sport.Tables["tb_sport"].Rows[0]["sp_type"].ToString();
+                        
+                        
                     }
 
                 }
@@ -264,9 +279,9 @@ namespace sport
                 txtFatherProvince.Text  = "";
                 txtFatherSubDistrict.Text  = "";
 
-                txtidsport.Text = "";
-                txtsportname.Text = "";
-                txtsporttype.Text = "";
+                cobIDsport.Text = "";
+                cobSportname.Text = "";
+                cobSporttype.Text = "";
                 
 
         }
@@ -281,11 +296,11 @@ namespace sport
         {
             if (rdbMale.Checked == true)
             {
-                stateGenter = "ชาย";
+                stateGen = "ชาย";
             }
             else
             {
-                stateGenter = "หญิง";
+                stateGen = "หญิง";
             }
         }
         private void btnEdit_Click(object sender, EventArgs e)
@@ -299,7 +314,7 @@ namespace sport
                 {
                     sqlEdit = "update tb_applicant set aplc_name = '" + txtAppName.Text + 
                         "',aplc_surname = '" + txtAppSurname.Text +
-                        "',aplc_gender = '" + stateGenter +
+                        "',aplc_gender = '" + stateGen +
                         "',aplc_nationality = '" + txtAppNationality.Text + 
                         "',aplc_Email = '" + txtAppEmail.Text + 
                         "',aplc_phone = '" + txtAppPhone.Text +
@@ -311,7 +326,7 @@ namespace sport
                         "',aplc_sub_district = '" + txtAppSubDistrict.Text +
                         "',aplcb_date = '" + Apclb_date.Value.ToString() +
                         "',aplica_date = '" + Apcldate.Value.ToString() +
-                        "',id_sport = '" + txtidsport.Text +
+                        "',id_sport = '" + cobIDsport.Text +
                         "',id_nbmother = '" + txtMotherID.Text +
                         "',id_nbfather = '" + txtFatherID.Text +
                         "',id_officer= '" + AC.currentid +
@@ -422,7 +437,7 @@ namespace sport
                         + txtAppID.Text + "','"
                         + txtAppName.Text + "','"
                         + txtAppSurname.Text + "','"
-                        + stateGenter + "','"
+                        + stateGen + "','"
                         + txtAppNationality.Text + "','"
                         + txtAppEmail.Text + "','"
                         + txtAppPhone.Text + "','"
@@ -434,7 +449,7 @@ namespace sport
                         + txtAppSubDistrict.Text + "','"
                         + Apclb_date.Value.ToString() + "','"
                         + Apcldate.Value.ToString() + "','"
-                        + txtidsport.Text + "','"
+                        + cobIDsport.Text + "','"
                         + txtMotherID.Text + "','"
                         + txtFatherID.Text + "','"
                         + AC.currentid
@@ -585,6 +600,7 @@ namespace sport
                 AC.IsFind = true;
                 TbApcldata.ReadOnly = true;
                 TbApcldata.DataSource = AC.ds.Tables["tb_applicant"];
+
             }
             else
             {

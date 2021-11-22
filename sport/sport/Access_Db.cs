@@ -22,6 +22,7 @@ namespace sport.Properties
         public static string currentname;
         public static string currentsurname;
         public static string currentid;
+        public static string currentGen;
         public static string sql;
         
         public static bool IsFind = false;

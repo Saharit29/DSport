@@ -61,6 +61,7 @@ namespace sport
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
+            DataSet KDSearch = new DataSet();
             if (e.KeyValue == 13)
             {
                 if (txtSearch.Text != "")
@@ -69,18 +70,18 @@ namespace sport
                         txtSearch.Text + "'";
 
                     da = new OleDbDataAdapter(sSearch, AC.con);
-                    da.Fill(dsFilter, "tb_applicant");
+                    da.Fill(KDSearch, "tb_applicant");
 
                     if (bIsFind == true)
                     {
-                        sds.Tables["tb_applicant"].Clear();
+                        KDSearch.Tables["tb_applicant"].Clear();
                     }
 
-                    if (dsFilter.Tables["tb_applicant"].Rows.Count != 0)
+                    if (KDSearch.Tables["tb_applicant"].Rows.Count != 0)
                     {
                         bIsFind = true;
                         dgvAllApp.ReadOnly = true;
-                        dgvAllApp.DataSource = sds;
+                        dgvAllApp.DataSource = KDSearch.Tables["tb_applicant"];
                     }
                     else
                     {
@@ -97,6 +98,37 @@ namespace sport
             Frm.ShowDialog();
         }
 
+        private void btnSearchFlterApp_Click(object sender, EventArgs e)
+        {
+            DataSet dssSearch = new DataSet();
+            string sSearch = "select * from tb_applicant where id_numberaplc='" + txtSearch.Text + "'";
+            if (txtSearch.Text != "")
+            {
+                if (bCheck == true)
+                {
+                    dssSearch.Tables["tb_applicant"].Clear();
+                }
+
+
+                
+                
+               
+                da = new OleDbDataAdapter(sSearch, AC.con);
+                da.Fill(dssSearch, "tb_applicant");
+             
+                if (dssSearch.Tables["tb_applicant"].Rows.Count != 0)
+                {
+                    bCheck = true;
+                    dgvAllApp.ReadOnly = true;
+                    dgvAllApp.DataSource = dssSearch.Tables["tb_applicant"];
+                }
+                else
+                {
+                    bCheck = false;
+                }
+
+            }
+        }
         //AC ocn = new AC();
 
         private void FormFilterApp_Load(object sender, EventArgs e)
